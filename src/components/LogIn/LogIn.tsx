@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useSignIn } from "@clerk/clerk-react";
-import { Link, redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { MailOutlined } from '@ant-design/icons';
-import { Input, Space } from 'antd';
+import { Input } from 'antd';
 import { LockOutlined} from '@ant-design/icons';
 import './LogIn.css';
 import React from "react";

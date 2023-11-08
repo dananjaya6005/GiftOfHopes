@@ -1,5 +1,5 @@
 // MainRouter.js (or wherever you define your routes)
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import SignUp from './components/SignUp/SignUp'
 import Login from './components/LogIn/LogIn';
 import Home from './components/Home/Home';

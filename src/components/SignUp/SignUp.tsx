@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { useSignUp } from "@clerk/clerk-react";
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './SignUp.css';
 import { Link } from "react-router-dom";
 import { MailOutlined } from '@ant-design/icons';
 import {SmileOutlined } from '@ant-design/icons';
 import {UserOutlined } from '@ant-design/icons';
 import {KeyOutlined } from '@ant-design/icons';
-import { Alert, Input, Space } from 'antd';
+import { Alert, Input } from 'antd';
 import { LockOutlined} from '@ant-design/icons';
 import LogoSignUp from '../../Images/Sign up-bro.png';
 import LiveEncriptLogo from  '../../Images/encryption.gif';

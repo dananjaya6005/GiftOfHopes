@@ -16,7 +16,7 @@ const SignOutButton = () => {
 };
 
 const DisplayUserInfo = () => {
-  const { isLoaded, isSignedIn, user } = useUser();
+  const {  user } = useUser();
  
   return (
     <div>
