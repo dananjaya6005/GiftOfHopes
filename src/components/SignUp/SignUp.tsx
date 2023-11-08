@@ -11,6 +11,7 @@ import { Alert, Input, Space } from 'antd';
 import { LockOutlined} from '@ant-design/icons';
 import LogoSignUp from '../../Images/Sign up-bro.png';
 import LiveEncriptLogo from  '../../Images/encryption.gif';
+import afterVeifyedLogo from '../../Images/rocket.gif';
 
 
 
@@ -181,7 +182,8 @@ export default function SignUp() {
       {
         isVerified && (
           <div>
-            <h1>Thank you for verifying your email</h1>
+            <img style={{width:100,margin:20}} src={afterVeifyedLogo} alt="logo" className="afterVeifyedLogo"/>
+            <h1 style={{color:"#1e3715"}}>Thank you for verifying your email ! </h1>
             <button onClick={() => navigate('/')}>Go to Home</button>
           </div>
         )
