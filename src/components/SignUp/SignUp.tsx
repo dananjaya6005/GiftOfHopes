@@ -7,7 +7,7 @@ import { MailOutlined } from '@ant-design/icons';
 import {SmileOutlined } from '@ant-design/icons';
 import {UserOutlined } from '@ant-design/icons';
 import {KeyOutlined } from '@ant-design/icons';
-import { Input, Space } from 'antd';
+import { Alert, Input, Space } from 'antd';
 import { LockOutlined} from '@ant-design/icons';
 import LogoSignUp from '../../Images/Sign up-bro.png';
 import LiveEncriptLogo from  '../../Images/encryption.gif';
@@ -29,7 +29,7 @@ export default function SignUp() {
   const [code, setCode] = useState("");
   const [isVerified, setIsVerified] = useState(false);
   const [error, setError] = useState('');
-  
+
   // start the sign up process.
   const handleSubmit = async (e : any) => {
     e.preventDefault();
@@ -55,6 +55,8 @@ export default function SignUp() {
       setPendingVerification(true);
     } catch (err: any) {
       console.error(JSON.stringify(err, null, 2));
+      console.error("error", err.errors[0].longMessage)
+      setError(err.errors[0].longMessage);
     }
   };
  
@@ -77,10 +79,13 @@ export default function SignUp() {
       if (completeSignUp.status === "complete") {
         await setActive({ session: completeSignUp.createdSessionId });
        setIsVerified(true);
+       
         
       }
     } catch (err: any) {
       console.error(JSON.stringify(err, null, 2));
+      console.error("error", err.errors[0].longMessage)
+      setError(err.errors[0].longMessage);
     }
   };
 
@@ -138,7 +143,8 @@ export default function SignUp() {
         
       
       <Link to="/login">Already have an account? Sign Up</Link>
-      
+
+    
 
         </>
 
@@ -162,8 +168,15 @@ export default function SignUp() {
               Verify Email
             </button>
           </form>
+         
         </div>
       )}
+
+      {error && (  
+
+      <Alert message={error} type="error" showIcon closable/>
+
+      ) }
 
       {
         isVerified && (
