@@ -1,8 +1,19 @@
 import { useState } from "react";
 import { useSignUp } from "@clerk/clerk-react";
 import { Route, Routes, useNavigate } from 'react-router-dom';
-import Login from '../LogIn/LogIn';
+import './SignUp.css';
 import { Link } from "react-router-dom";
+import { MailOutlined } from '@ant-design/icons';
+import {SmileOutlined } from '@ant-design/icons';
+import {UserOutlined } from '@ant-design/icons';
+import {KeyOutlined } from '@ant-design/icons';
+import { Input, Space } from 'antd';
+import { LockOutlined} from '@ant-design/icons';
+import LogoSignUp from '../../Images/Sign up-bro.png';
+import LiveEncriptLogo from  '../../Images/encryption.gif';
+
+
+
 
 export default function SignUp() {
 
@@ -11,11 +22,14 @@ export default function SignUp() {
   const { isLoaded, signUp, setActive } = useSignUp();
   const [emailAddress, setEmailAddress] = useState("");
   const [username,setUseName] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [password, setPassword] = useState("");
   const [pendingVerification, setPendingVerification] = useState(false);
   const [code, setCode] = useState("");
   const [isVerified, setIsVerified] = useState(false);
-
+  const [error, setError] = useState('');
+  
   // start the sign up process.
   const handleSubmit = async (e : any) => {
     e.preventDefault();
@@ -27,7 +41,11 @@ export default function SignUp() {
       await signUp.create({
         emailAddress,
         password,
-        username
+        username,
+        firstName,
+        lastName
+        
+      
       });
  
       // send the email.
@@ -67,35 +85,60 @@ export default function SignUp() {
   };
 
 
-
-
-
-
  
   return (
+  
+
     <div>
+
+      {!pendingVerification &&(
+            
+            <div>
+              <h3 className="headSignUp">Hello ! Create a fresh account </h3>
+              <p className="subtextSignUp">Join us our misson to empower the future generation through donation</p>
+              <hr/>
+              <img  src={LogoSignUp} alt="logo" className="LogoSignUp"/>
+            </div>
+            
+    
+      )}
+
+
 
       {!pendingVerification && (
       <>
         <form>
+          
+        <div>
+            <label htmlFor="firstName"></label>
+            <Input className="customInputSignUp" size="large" placeholder="  Enter first Name" id="firstname" name="firstname" type="firstname" prefix={<SmileOutlined />} onChange={(e) => setFirstName(e.target.value)}/>
+        </div>
+
+        <div>
+            <label htmlFor="lastName"></label>
+            <Input className="customInputSignUp" size="large" placeholder="  Enter Last Name" id="lastName" name="lastName" type="lastName" prefix={<SmileOutlined />} onChange={(e) => setLastName(e.target.value)}/>
+        </div>
+
           <div>
-            <label htmlFor="email">Email</label>
-            <input onChange={(e) => setEmailAddress(e.target.value)} id="email" name="email" type="email" />
-          </div>
+            <label htmlFor="email"></label>
+            <Input className="customInputSignUp" size="large" placeholder="Enter Email Adress" id="email" name="email" type="email" prefix={<MailOutlined />} onChange={(e) => setEmailAddress(e.target.value)}/>          </div>
           <div>
-            <label htmlFor="username">username</label>
-            <input onChange={(e) => setUseName(e.target.value)} id="username" name="username" type="username" />
+            <label htmlFor="username"></label>
+            <Input className="customInputSignUp" size="large" placeholder="Enter User name" id="username" name="username" type="username" prefix={<UserOutlined />} onChange={(e) => setUseName(e.target.value)}/>
           </div>
+          
           <div>
-            <label htmlFor="password">Password</label>
-            <input onChange={(e) => setPassword(e.target.value)} id="password" name="password" type="password" />
+            <label htmlFor="password"></label>
+            <Input className="customInputSignUp" size="large" placeholder="Enter password" onChange={(e) => setPassword(e.target.value)} id="password" name="password" type="password" prefix={<LockOutlined/>}/> 
           </div>
-          <button onClick={handleSubmit}>Sign up</button>
+
+
+          <button onClick={handleSubmit}>Register</button>
         </form>
         
-      <button>
-      <Link to="/login">Already have an account? Sign in</Link>
-      </button>
+      
+      <Link to="/login">Already have an account? Sign Up</Link>
+      
 
         </>
 
@@ -104,12 +147,17 @@ export default function SignUp() {
       )}
       {pendingVerification && !isVerified && (
         <div>
+          <h3 className="verifytext">Check your E-mail to find verify code !</h3>
+          <img style={{width:200}} src={LiveEncriptLogo} alt="logo" className="LiveEncriptLogo"/>
           <form>
-            <input
-              value={code}
-              placeholder="Code..."
-              onChange={(e) => setCode(e.target.value)}
-            />
+            <Input 
+            style={{width:200}}
+            className="customInput" 
+            value={code}
+            size="large" placeholder="Enter Verify code" 
+            prefix={<KeyOutlined />} 
+            onChange={(e) => setCode(e.target.value)}/>
+
             <button onClick={onPressVerify}>
               Verify Email
             </button>

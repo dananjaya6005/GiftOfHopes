@@ -2,12 +2,20 @@ import { useState } from "react";
 import { useSignIn } from "@clerk/clerk-react";
 import { Link, redirect } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { MailOutlined } from '@ant-design/icons';
+import { Input, Space } from 'antd';
+import { LockOutlined} from '@ant-design/icons';
+import './LogIn.css';
+import React from "react";
+import loginLogo from '../../Images/Charity-pana.png';
+import { Alert } from 'antd';
 
  
 export default function SignInForm() {
   const { isLoaded, signIn, setActive } = useSignIn();
   const [emailAddress, setEmailAddress] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState('');
 
 
   const navigate = useNavigate();
@@ -36,30 +44,54 @@ export default function SignInForm() {
       else {
         /*Investigate why the login hasn't completed */
         console.log(result);
+        
       }
  
     } catch (err: any) {
       console.error("error", err.errors[0].longMessage)
+      setError(err.errors[0].longMessage);
     }
   };
  
   return (
+
+    <React.Fragment>
+
+    <h2>Gift Of Hope</h2>
+    <p>Welcome back to our circle of kindness! </p>
+    <p className="secondsubtext">Your generosity has the power to make a world of difference. Log in and let’s continue this journey of giving together !</p>
+    <hr/>
+    <img  src={loginLogo} alt="logo" className="loginLogo"/>
+
     <div>
       <form>
         <div>
-          <label htmlFor="email">Email</label>
-          <input onChange={(e) => setEmailAddress(e.target.value)} id="email" name="email" type="email" />
+          <label htmlFor="email"></label>
+          <Input className="customInput" size="large" placeholder="Enter Email Adress" id="email" name="email" type="email" prefix={<MailOutlined />} onChange={(e) => setEmailAddress(e.target.value)}/>
         </div>
+        
+      <br/>
+
         <div>
-          <label htmlFor="password">Password</label>
-          <input onChange={(e) => setPassword(e.target.value)} id="password" name="password" type="password" />
+          <label htmlFor="password"></label>
+          <Input className="customInput" size="large" placeholder="Enter Password" onChange={(e) => setPassword(e.target.value)} id="password" name="password" type="password" prefix={<LockOutlined/>}/> 
         </div>
         <button onClick={handleSubmit}>Sign In</button>
       </form>
-      <button>
-        <Link to='/signup'>No account </Link>
-      </button>
-      <a href="/login">Go Singup</a>
+      
+        <Link to='/signup'>Don't have an account ? </Link>
+      
+
     </div>
+
+    {isLoaded ? null : <p>Loading...</p>}
+  
+    {error && (
+    <Alert  style={{marginTop:30}} message={error} type="warning" showIcon closable />
+    )}
+
+ 
+
+    </React.Fragment>
   );
 }

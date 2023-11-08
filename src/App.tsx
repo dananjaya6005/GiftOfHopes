@@ -33,7 +33,7 @@ function App() {
       </SignedIn>
       <SignedOut>
      
-      <Example/>
+      <SignUpORLogin/>
        {/* <Navigate to="/login" /> */}
       </SignedOut>
     </ClerkProvider>
@@ -43,7 +43,7 @@ function App() {
 }
 
 
-const Example = () : any=>{
+const SignUpORLogin = () : any=>{
   const location = useLocation();
   const CurruntPath = location.pathname;
   const { isLoaded, isSignedIn, user } = useUser();
@@ -58,26 +58,6 @@ const Example = () : any=>{
   
 }
 
-
-
-
-
-function RouteComponent() {
-  const location = useLocation();
-  const CurruntPath = location.pathname;
-
-  return CurruntPath === '/login' ? null : <SignUp />;
-}
-
-function RedirectToHome() {
-  const { isLoaded, isSignedIn, user } = useUser();
-  const navigate = useNavigate();
-
-  if (isSignedIn) {
-    navigate('/');
-  }
-  return null;
-}
 
 
 export default App;
