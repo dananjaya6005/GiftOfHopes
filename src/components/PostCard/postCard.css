@@ -1,0 +1,154 @@
+.postCard {
+    width: 35%;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    cursor:cell;
+
+    &:hover {
+        transform: scale(1.05);
+
+
+    }
+
+}
+
+.postCard_header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 0px;
+    justify-items: center;
+    align-items: center;
+    ;
+
+}
+
+.titleAnddate {
+    width: 100%;
+    display: flex;
+    margin-left: 30px;
+    margin-top: 20px;
+    justify-content: space-between;
+
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+
+}
+
+.date {
+    font-size: 0.8rem;
+    color: #21222e;
+}
+
+.title {
+    display: flex;
+    font-weight: 800;
+
+
+
+}
+
+.makeSomthing {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+
+.type {
+
+    font-size: medium;
+    justify-self: flex-start;
+    margin-left: 30px;
+    padding-top:2px;
+   color: #4d4d4f;
+
+}
+
+.writter{
+
+    font-size: smaller;
+    justify-self: flex-start;
+    margin-left: 30px;
+    padding-top:8px;
+   color: #979799;
+   font-style: italic;
+
+}
+
+
+
+.mainHeaderAll {
+    width: 100%;
+    display: flex;
+
+}
+
+
+.discription{
+    margin-top: 1px;
+    font-size:15px;
+    text-align: left;
+}
+
+
+
+
+.button-33 {
+  background-color: #fbc2db;
+  border-radius: 100px;
+  box-shadow: rgba(187, 44, 82, 0.2) 0 -25px 18px -14px inset,rgba(187, 44, 53, 0.15) 0 1px 2px,rgba(187, 44, 120, 0.15) 0 2px 4px,rgba(187, 44, 115, 0.15) 0 4px 8px,rgba(187, 44, 65, 0.15) 0 8px 16px,rgba(187, 44, 70, 0.15) 0 16px 32px;
+  color: rgb(128, 0, 38);
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin:0;
+}
+
+.button-33:hover {
+  box-shadow: rgba(187, 44, 87, 0.35) 0 -25px 18px -14px inset,rgba(187, 44, 75, 0.25) 0 1px 2px,rgba(187, 44, 70, 0.25) 0 2px 4px,rgba(187, 44, 87, 0.25) 0 4px 8px,rgba(187, 44, 115, 0.25) 0 8px 16px,rgba(187, 44, 99, 0.25) 0 16px 32px;
+  
+}
+
+
+.CustomDonateBtn{
+    background-color: #800040;
+    margin: 0;
+    transition: border-color 0s;
+    border-width: 0;
+}
+
+
+.CustomDonateBtn:focus,
+.CustomDonateBtn:focus-visible {
+  outline: 0px auto -webkit-focus-ring-color;
+}
+
+.DonationBtnContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 10%;
+    width: 100%;
+}
+
