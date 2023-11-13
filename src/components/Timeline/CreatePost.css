@@ -1,0 +1,43 @@
+
+.FormItself{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+   
+}
+
+.location{
+    display: flex;
+    font-size: small;
+    padding-top: 25px;
+    font-style: italic;
+    color: rgb(106, 106, 106);
+}
+
+
+
+.FormStyle{
+width: 100%;
+display:flex;
+justify-content:space-evenly;
+padding-top: 50px;
+
+}
+.Header{
+    text-align: left;
+    margin-left: 20px;
+}
+
+.HeaderContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+}
+
+h2{
+    margin: 0;
+}

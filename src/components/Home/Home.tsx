@@ -2,7 +2,7 @@ import React from 'react'
 import { useClerk, useUser } from "@clerk/clerk-react";
 import { Link } from 'react-router-dom';
 import './Home.css';
-import PostCard from '../PostCard/postCard';
+
 
 const SignOutButton = () => {
   const { signOut } = useClerk();
@@ -33,8 +33,10 @@ export default function Home() {
      <div>Hello you are signed in</div>
       <SignOutButton/>  
       <Link to="/about">Go to About</Link>
-
-      <PostCard/>
+      <br />
+      <Link to="/showpost">Donate now ! </Link>
+      <br />
+      <Link to="/createpost">Create An event</Link>
     </>
 
   )

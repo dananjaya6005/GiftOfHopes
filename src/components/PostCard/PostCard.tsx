@@ -34,6 +34,11 @@ export default function PostCard(props: any) {
         </div> */}
 
         <div className="DonationBtnContainer">
+
+
+
+
+          
           <ConfigProvider
             theme={{
               token: {
@@ -56,6 +61,12 @@ export default function PostCard(props: any) {
               </Button>
             </Space>
           </ConfigProvider>
+
+          <div className="location">
+          <p>{props.location}</p>
+          </div>
+          
+        
         </div>
       </div>
     </>

@@ -18,6 +18,7 @@ type Post = {
   reacts: number;
   createDate: string;
   type: string;
+  location: string;
 };
 
 export default function ShowPost() {
@@ -52,6 +53,7 @@ export default function ShowPost() {
               reacts={item.reacts}
               createDate={item.createDate}
               type={item.type}
+              location={item.location}
             />
           );
         })}
