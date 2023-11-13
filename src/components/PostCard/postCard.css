@@ -1,6 +1,8 @@
+
 .postCard {
+    margin: 1rem;
     width: 35%;
-    height: min-content;
+    height: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;

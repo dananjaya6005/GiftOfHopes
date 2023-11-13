@@ -3,6 +3,10 @@ import { createClient } from "@supabase/supabase-js";
 import { Button, Form, Input, Radio, DatePicker, Select, Steps } from "antd";
 import "./CreatePost.css";
 import Bigimage from "../../Images/Donation-image-removebg-preview.png";
+import Navbar from "../Nav/NavBar";
+
+
+
 
 const { TextArea } = Input;
 
@@ -84,6 +88,7 @@ export default function CreatePost() {
 
   return (
     <div>
+      <Navbar />
       <div className="HeaderContainer">
         <div className="Header">
           <h2 style={{ color: "#005580" }}>Be the Reason</h2>

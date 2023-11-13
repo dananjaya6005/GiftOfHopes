@@ -1,3 +1,8 @@
+#root{
+
+
+}
+
 
 .FormItself{
     display: flex;
@@ -31,7 +36,8 @@ padding-top: 50px;
 .HeaderContainer{
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: fit-content;
+    margin: 2rem;
     align-items: center;
     justify-content: space-between;
     

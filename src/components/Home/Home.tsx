@@ -2,7 +2,7 @@ import React from 'react'
 import { useClerk, useUser } from "@clerk/clerk-react";
 import { Link } from 'react-router-dom';
 import './Home.css';
-
+import Navbar from '../Nav/NavBar';
 
 const SignOutButton = () => {
   const { signOut } = useClerk();
@@ -29,6 +29,7 @@ const DisplayUserInfo = () => {
 export default function Home() {
   return (
     <>
+    <Navbar/>
     <DisplayUserInfo/>
      <div>Hello you are signed in</div>
       <SignOutButton/>  
