@@ -109,7 +109,7 @@ export default function CreatePost() {
         </div>
 
         <div className="Bigimage">
-          <img src={Bigimage} alt="Help us to build the child world !" />
+          <img className="bigLogoImage" src={Bigimage} alt="Help us to build the child world !" />
         </div>
       </div>
 
