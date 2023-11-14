@@ -1,61 +1,64 @@
-#root{
-
-
+#root {
 }
 
-
-.FormItself{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-   
+.FormItself {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }
 
-.location{
-    display: flex;
-    font-size: small;
-    padding-top: 25px;
-    font-style: italic;
-    color: rgb(106, 106, 106);
+.location {
+  display: flex;
+  font-size: small;
+  padding-top: 25px;
+  font-style: italic;
+  color: rgb(106, 106, 106);
 }
 
-
-
-.FormStyle{
-width: 100%;
-display:flex;
-justify-content:space-evenly;
-padding-top: 50px;
-
+.FormStyle {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 50px;
 }
-.Header{
-    text-align: left;
-    margin-left: 20px;
+.Header {
+  text-align: left;
+  margin-left: 20px;
 }
 
-.HeaderContainer{
-    display: flex;
-    flex-direction: row;
-    width: fit-content;
-    margin: 2rem;
-    align-items: center;
-    justify-content: space-between;
-    
-    
+.HeaderContainer {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  margin: 2rem;
+  align-items: center;
+  justify-content: space-between;
 }
 
-h2{
-    margin: 0;
+h2 {
+  margin: 0;
 }
 
 .bigLogoImage {
-    animation: colorChange 6s infinite;
-    transition: 2000ms;
+  animation: colorChange 6s infinite;
+  transition: 2000ms;
 }
 
 @keyframes colorChange {
-    0% { filter: drop-shadow(0 0 2em rgb(137, 167, 248),0.4); }
-    25% { filter: drop-shadow(0 0 2em rgb(250, 168, 67)); }
-    50% { filter: drop-shadow(0 0 2em rgb(0, 149, 255)); }
-    
+  0% {
+    filter: drop-shadow(0 0 2em rgb(137, 167, 248), 0.4);
+  }
+  25% {
+    filter: drop-shadow(0 0 2em rgb(250, 168, 67));
+  }
+  50% {
+    filter: drop-shadow(0 0 2em rgb(0, 149, 255));
+  }
+}
+.MainHead {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.subtxt{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

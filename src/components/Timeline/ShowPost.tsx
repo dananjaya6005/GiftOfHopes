@@ -47,14 +47,13 @@ export default function ShowPost() {
   return (
     <React.Fragment >
       
-      
       <div className="headContaner">
         <div className="headText">
-          <h3 className="HeadTopTitle" style={{ marginTop: "30px", padding: "0px",color:"#ffab10"}}>
+          <h2 className="ShowPostHeadtxt" style={{ marginTop: "30px", padding: "0px",color:"#ffab10"}}>
             Explore Donation Events
-          </h3>{" "}
+          </h2>
           <br />
-          <h3 style={{ margin: "0px", padding: "0px", fontSize: "23px", color:'#ffeaab' }}>
+          <h3 className="ShowPostSubtext" style={{ margin: "0px", padding: "0px", fontSize: "23px", color:'#ffeaab' }}>
             Be the Change You Wish to See
           </h3>
           <div  style={{marginTop:40}} className="subtextStynle">

@@ -91,8 +91,8 @@ export default function CreatePost() {
       
       <div className="HeaderContainer">
         <div className="Header">
-          <h2 style={{ color: "#005580" }}>Be the Reason</h2>
-          <h2 style={{ fontSize: "xx-large", color: "#e67300" }}>
+          <h2 className="MainHead" style={{ color: "#005580" }}>Be the Reason</h2>
+          <h2 className="subtxt" style={{ fontSize: "xx-large", color: "#e67300" }}>
             Someone will Smiles Tomorrow !
           </h2>
           <p style={{fontSize:"14px",paddingTop:"30px"}}>

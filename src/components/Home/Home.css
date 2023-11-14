@@ -6,19 +6,68 @@
     min-height: 100vh;
   } */
 .slideShow{
-
   height:438px;
   width:460px;
-  background-color: antiquewhite;
   justify-content: flex-end;  
 }
 .carousel{
  display: flex;
 
+
 }
 .headContainer{
+  position: absolute;
+  top: 100px;
+  left: 0;
   display: flex;
   width: 100%;
-  background-color: rgb(85, 51, 7);
+  
   justify-content: flex-end;
+}
+.head{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+.TopTextContaniner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.headTextWrap{
+  font-family: Kaushan Script , cursive;
+  font-size: 3rem;
+  color: rgb(255, 177, 10);
+  text-shadow: 1px 3px 3px  rgb(12, 11, 0);
+}
+.secondHeadText{
+  font-family: Kaushan Script , cursive;
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 3px 3px  rgb(12, 11, 0);
+}
+
+.homeDescription{
+  width: 90%;
+  color: rgb(255, 255, 255);
+  margin-top: 10px;
+  
+}
+.btnTwo{
+  margin-left: 30px;
+  width: 200px;
+  background-color: rgb(175, 128, 0);
+  height: 50px;
+  transition: 1000ms;
+  &:hover{
+    background-color: rgb(109, 75, 0);
+    color: rgb(255, 255, 255);
+  }
 }

@@ -88,7 +88,7 @@ const Navbar = () => {
     const { user } = useUser();
   
     return (
-      <div style={{fontStyle:'italic',fontWeight:'600'}}>
+      <div style={{fontWeight:'600', fontFamily:'Franklin Gothic Medium'}}>
        {user?.firstName} {user?.lastName}
       </div>
     );
