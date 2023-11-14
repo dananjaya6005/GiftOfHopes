@@ -71,3 +71,26 @@
     color: rgb(255, 255, 255);
   }
 }
+.secondContext{
+  margin: 0;
+}
+
+.secondContexttext1{
+  color: rgb(62, 62, 62);
+  font-size: 2.6rem;
+  font-family: 'Caveat';
+}
+
+.HomemakeRowStyle{
+  display: flex;
+  width: 100%;
+  transform: scale(0.8);
+  margin-top: -79px;
+  
+}
+
+.discoverMoreBtn{
+  background-color:rgb(50, 34, 0) ;
+  border-radius: 10px;
+}
+

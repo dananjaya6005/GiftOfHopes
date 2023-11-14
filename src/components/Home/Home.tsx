@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useClerk, useUser } from "@clerk/clerk-react";
 import { Link } from "react-router-dom";
+import { createClient } from "@supabase/supabase-js";
 import "./Home.css";
 import { Carousel } from "antd";
 import img1 from "../../cropedImages/img1.jpg";
@@ -9,6 +10,14 @@ import img3 from "../../cropedImages/img3.jpg";
 import img4 from "../../cropedImages/img4.png";
 import img5 from "../../cropedImages/img5.jpg";
 import videeChild from "../../video/New project.mp4";
+import PostCard from "../PostCard/MiniCard/PostCard";
+import { useNavigate } from "react-router-dom";
+
+const supabase = createClient(
+  "https://pjqbnzerwqygskkretxd.supabase.co",
+
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBqcWJuemVyd3F5Z3Nra3JldHhkIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTk2NzQzNzYsImV4cCI6MjAxNTI1MDM3Nn0.tCOsaglHK0BVL689wrFKvQIVat88jhKow-yMsURlJSE"
+);
 
 const contentStyle: React.CSSProperties = {
   margin: 10,
@@ -33,20 +42,33 @@ const SignOutButton = () => {
   );
 };
 
-const DisplayUserInfo = () => {
-  const { user } = useUser();
-
-  return (
-    <div>
-      {user?.firstName} {user?.lastName}
-    </div>
-  );
+type Post = {
+  title: string;
+  writter_name: string;
+  discription: string;
+  reacts: number;
+  createDate: string;
+  type: string;
+  location: string;
 };
-
 export default function Home() {
-  const onChange = (currentSlide: number) => {
-    console.log(currentSlide);
-  };
+  const navigate = useNavigate();
+  const [post, setPost] = useState<Post[]>([]);
+
+  useEffect(() => {
+    getPost();
+  }, []);
+
+  async function getPost() {
+    const { data, error } = await supabase.from("Timeline").select();
+    console.log(data, error);
+
+    if (data) {
+      setPost(data);
+    }
+  }
+
+
 
   return (
     <>
@@ -73,8 +95,8 @@ export default function Home() {
             support.
           </p>
           <div className="btnContanier">
-          <button className="btnTwo">Donate now</button>
-          <button className="btnTwo">Organzie Event</button>
+          <button onClick={()=>{navigate('/showpost')}} className="btnTwo">Donate now</button>
+          <button onClick={()=>{navigate('/createpost')}} className="btnTwo">Organzie Event</button>
         </div>
         </div>
 
@@ -84,7 +106,6 @@ export default function Home() {
             speed={1500}
             dots={false}
             autoplay
-            afterChange={onChange}
             fade={true}
           >
             <div>
@@ -106,14 +127,34 @@ export default function Home() {
         </div>
       </div>
 
-      <DisplayUserInfo />
-      <div>Hello you are signed in</div>
-      <SignOutButton />
-      <Link to="/about">Go to About</Link>
-      <br />
-      <Link to="/showpost">Donate now ! </Link>
-      <br />
-      <Link to="/createpost">Create An event</Link>
+      <div className="secondContext">
+        <h4 className="secondContexttext1">Empower children through <span style={{color:'red'}}>Education</span></h4>
+      </div>
+
+      <div className="HomemakeRowStyle">
+  {post &&
+    Array.isArray(post) &&
+    [...post].reverse().slice(0, 3).map((item: Post, index: number) => {
+      return (
+        
+          <PostCard
+            key={index}
+            title={item.title}
+            writter_name={item.writter_name}
+            discription={item.discription}
+            reacts={item.reacts}
+            createDate={item.createDate}
+            type={item.type}
+            location={item.location}
+          />
+      
+      );
+    })}
+</div>
+<button onClick={()=>{navigate('/showpost')}} className="discoverMoreBtn">Discover More </button>
+
+
+    
     </>
   );
 }
