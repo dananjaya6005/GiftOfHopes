@@ -139,7 +139,7 @@ export default function SignUp() {
           </div>
 
 
-          <button onClick={handleSubmit}>Register</button>
+          <button style={{margin:20}}onClick={handleSubmit}>Register</button>
         </form>
         
       

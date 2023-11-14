@@ -57,7 +57,7 @@ export default function SignInForm() {
 
     <React.Fragment>
 
-    <h2>Gift Of Hope</h2>
+    <h3 className="HeadLogin">Gift Of Hope</h3>
     <p>Welcome back to our circle of kindness! </p>
     <p className="secondsubtext">Your generosity has the power to make a world of difference. Log in and let’s continue this journey of giving together !</p>
     <hr/>
@@ -76,7 +76,7 @@ export default function SignInForm() {
           <label htmlFor="password"></label>
           <Input className="customInput" size="large" placeholder="Enter Password" onChange={(e) => setPassword(e.target.value)} id="password" name="password" type="password" prefix={<LockOutlined/>}/> 
         </div>
-        <button onClick={handleSubmit}>Sign In</button>
+        <button style={{margin:20}} onClick={handleSubmit}>Sign In</button>
       </form>
       
         <Link to='/signup'>Don't have an account ? </Link>

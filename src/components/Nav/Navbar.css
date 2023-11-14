@@ -1,17 +1,20 @@
 .menu{
     justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    
 }
 
 .head_nav{
+  
    display: flex;
    flex-direction: row;
    justify-content:space-between;
-    align-items: center;
-  
+   align-items: center;
+   border-bottom: 1px solid #23222249;
+   
+}
 
-   
-   
-  
-    
-   
+button{
+    margin: 0;
 }

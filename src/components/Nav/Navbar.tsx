@@ -3,7 +3,9 @@ import { AppstoreOutlined, CreditCardOutlined, HomeFilled, MailOutlined, Questio
 import { Menu,Button,Input } from 'antd';
 import './Navbar.css';
 import { useClerk, useUser } from "@clerk/clerk-react";
+import { SignOutButton } from "@clerk/clerk-react";
 import { Navigate } from 'react-router-dom';
+import { NavigateProps } from 'react-router-dom';
 
 
 const items = [
@@ -55,26 +57,28 @@ const items = [
     ],
   }
 ];
+
+
+
 const Navbar = () => {
+
+
 
     const { signOut } = useClerk();
     const { isLoaded, isSignedIn, user } = useUser();
 
- 
-
-   
- 
-
-  const [current, setCurrent] = useState('mail');
-  const onClick = (e:any) => {
-    console.log('click ', e);
-    setCurrent(e.key);
-  };
+     
+    const [current, setCurrent] = useState('mail');
+    const onClick = (e:any) => {
+      console.log('click ', e);
+      setCurrent(e.key);
+    };
   return (
   <div className='head_nav'>
   <Menu className='menu' onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />
   
-  <Button type="primary" onClick={()=>{signOut()}} >Log out </Button>
+ 
+  <SignOutButton  signOutCallback={()=>{window.location.href = "/login";}} />
 
   </div>
   

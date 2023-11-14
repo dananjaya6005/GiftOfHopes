@@ -21,7 +21,7 @@ const DisplayUserInfo = () => {
  
   return (
     <div>
-      <p>{user?.firstName}{" "}{user?.lastName}</p>
+     {user?.firstName}{" "}{user?.lastName}
     </div>
   );
 }
