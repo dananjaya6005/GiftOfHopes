@@ -3,6 +3,10 @@ import { useClerk, useUser } from "@clerk/clerk-react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import { Carousel } from "antd";
+import img1 from '../../cropedImages/img1.jpg';
+import img2 from '../../cropedImages/img2.jpg';
+import img3 from '../../cropedImages/img3.jpg';
+import img4 from '../../cropedImages/img4.png';
 
 const contentStyle: React.CSSProperties = {
   margin: 10,
@@ -52,16 +56,16 @@ export default function Home() {
             fade={true}
           >
             <div>
-              <h3 style={contentStyle}>1</h3>
+              <img style={contentStyle} src={img1} alt="img1" />
             </div>
             <div>
-              <h3 style={contentStyle}>2</h3>
+              <img style={contentStyle} src={img2} alt="img2" />
             </div>
             <div>
-              <h3 style={contentStyle}>3</h3>
+              <img style={contentStyle} src={img3} alt="img3" />
             </div>
             <div>
-              <h3 style={contentStyle}>4</h3>
+              <img style={contentStyle} src={img4} alt="img4" />
             </div>
           </Carousel>
         </div>
