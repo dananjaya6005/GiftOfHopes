@@ -88,7 +88,7 @@ export default function CreatePost() {
 
   return (
     <div>
-      <Navbar />
+      
       <div className="HeaderContainer">
         <div className="Header">
           <h2 style={{ color: "#005580" }}>Be the Reason</h2>

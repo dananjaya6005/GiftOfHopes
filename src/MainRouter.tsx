@@ -6,17 +6,34 @@ import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import ShowPost from "./components/Timeline/ShowPost";
 import CreatePost from "./components/Timeline/CreatePost";
+import Navbar from "./components/Nav/NavBar";
+import Payment from "./components/Payment/Payemnt";
+import { useUser } from "@clerk/clerk-react";
 
 function MainRouter() {
+  const { isLoaded, isSignedIn, user } = useUser();
+
+  function decideNavBarShowOrNot() {
+    if (isSignedIn) {
+      return <Navbar />;
+    } else {
+      return null;
+    }
+  }
+
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/signup" element={<SignUp />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/showpost" element={<ShowPost />} />
-      <Route path="/createpost" element={<CreatePost />} />
-    </Routes>
+    <>
+      {decideNavBarShowOrNot()}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/showpost" element={<ShowPost />} />
+        <Route path="/createpost" element={<CreatePost />} />
+        <Route path="/payment" element={<Payment />} />
+      </Routes>
+    </>
   );
 }
 

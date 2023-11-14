@@ -47,11 +47,12 @@ export default function ShowPost() {
   return (
     <React.Fragment >
       
+      
       <div className="headContaner">
         <div className="headText">
-          <h2 style={{ marginTop: "30px", padding: "0px",color:"#ffab10"}}>
+          <h3 className="HeadTopTitle" style={{ marginTop: "30px", padding: "0px",color:"#ffab10"}}>
             Explore Donation Events
-          </h2>{" "}
+          </h3>{" "}
           <br />
           <h3 style={{ margin: "0px", padding: "0px", fontSize: "23px", color:'#ffeaab' }}>
             Be the Change You Wish to See

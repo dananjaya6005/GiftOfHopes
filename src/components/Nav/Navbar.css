@@ -1,7 +1,7 @@
 .menu{
+    display: flex;
     justify-content: flex-end;
-    margin: 0;
-    padding: 0;
+    width: fit-content;
     
 }
 
@@ -11,10 +11,22 @@
    flex-direction: row;
    justify-content:space-between;
    align-items: center;
-   border-bottom: 1px solid #23222249;
+   border-bottom: 1px solid #876c0149;
    
 }
 
 button{
     margin: 0;
+}
+
+.signout{
+    margin-right: 10px;
+    background-color: #cf8d00;
+   
+}
+
+.UserDisplay{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
 }

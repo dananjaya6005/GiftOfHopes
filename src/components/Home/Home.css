@@ -5,5 +5,20 @@
     min-width :100%;
     min-height: 100vh;
   } */
+.slideShow{
 
+  height:438px;
+  width:460px;
+  background-color: antiquewhite;
+  justify-content: flex-end;  
+}
+.carousel{
+ display: flex;
 
+}
+.headContainer{
+  display: flex;
+  width: 100%;
+  background-color: rgb(85, 51, 7);
+  justify-content: flex-end;
+}
