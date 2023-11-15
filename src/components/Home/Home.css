@@ -1,10 +1,11 @@
-/* body {
-    margin: 0;
-    display: flex;
-    place-items:normal;
+body {
+
     min-width :100%;
     min-height: 100vh;
-  } */
+  }
+
+
+
 .slideShow {
   height: 35%;
   width: 35%;
@@ -101,6 +102,7 @@
 .discoverMoreBtn {
   background-color: rgb(50, 34, 0);
   border-radius: 10px;
+  color: rgb(255, 255, 255);
 }
 
 .whyChosesUSWhole {
@@ -134,6 +136,7 @@
 }
 
 .aboutOurHistory{
+  margin-top: 10px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -154,5 +157,11 @@
 }
 .aboutOurHistoryDescription{
   margin-top: 10px;
-  font-size: 20px;
+  
+  
+}
+
+.footer1{
+ bottom: 0;
+
 }

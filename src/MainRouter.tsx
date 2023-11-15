@@ -10,6 +10,8 @@ import Navbar from "./components/Nav/Navbar";
 import Payment from "./components/Payment/Payemnt";
 import { useUser } from "@clerk/clerk-react";
 
+
+
 function MainRouter() {
   const {  isSignedIn } = useUser();
 
@@ -33,6 +35,9 @@ function MainRouter() {
         <Route path="/createpost" element={<CreatePost />} />
         <Route path="/payment" element={<Payment />} />
       </Routes>
+      {
+      
+      }
     </>
   );
 }

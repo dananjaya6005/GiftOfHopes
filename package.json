@@ -13,17 +13,25 @@
   },
   "dependencies": {
     "@ant-design/icons": "^5.2.6",
+    "@chakra-ui/react": "^2.8.2",
     "@clerk/clerk-react": "^4.27.2",
-    "@mantine/core": "^7.2.1",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mantine/core": "^7.2.2",
+    "@mantine/ds": "^7.2.2",
     "@mantine/hooks": "^7.2.1",
     "@supabase/supabase-js": "^2.38.4",
     "@tabler/icons": "^2.40.0",
     "@tabler/icons-react": "^2.40.0",
     "antd": "^5.11.0",
+    "cdbreact": "^1.5.18",
+    "framer-motion": "^10.16.5",
     "gh-pages": "^6.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.18.0"
+    "react-icons": "^4.12.0",
+    "react-router-dom": "^6.18.0",
+    "reactstrap": "^9.2.1"
   },
   "devDependencies": {
     "@types/node": "^20.8.10",

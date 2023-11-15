@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import { createClient } from "@supabase/supabase-js";
 import "./Home.css";
@@ -12,6 +13,10 @@ import PostCard from "../PostCard/MiniCard/PostCard";
 import { useNavigate } from "react-router-dom";
 import psedit from "../../images/psedit.png";
 import psedit2 from "../../images/psedit2.png";
+import AppFooter from "../Footer/Footer";
+
+
+
 const supabase = createClient(
   "https://pjqbnzerwqygskkretxd.supabase.co",
 
@@ -205,6 +210,12 @@ export default function Home() {
         <img src={psedit2} alt="psedi2" className="psedit2" />
       
       </div>
+
+
+        <AppFooter/>
+       
+
+
     </>
   );
 }
