@@ -1,9 +1,9 @@
-import React, { useEffect, useState,useRef,MouseEvent  } from "react";
+import { useEffect, useState,useRef } from "react";
 import { createClient } from "@supabase/supabase-js";
-import { Button, Form, Input, Radio, DatePicker, Select, Steps } from "antd";
+import { Button, Form, Input, Select, Steps } from "antd";
 import "./CreatePost.css";
 import Bigimage from "../../Images/Donation-image-removebg-preview.png";
-import Navbar from "../Nav/NavBar";
+
 
 
 
@@ -77,7 +77,7 @@ export default function CreatePost() {
   }
 
   const myDiv = useRef<HTMLDivElement>(null);
-  const FoucstoForm = (event: MouseEvent<HTMLButtonElement>) => {
+  const FoucstoForm = () => {
     if (myDiv.current) {
       myDiv.current.scrollIntoView({ behavior: 'smooth',  });
     }

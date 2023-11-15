@@ -1,15 +1,12 @@
-import React from "react";
 import "./postCard.css";
-import donateBtnlogo from "../../Images/donate.png";
 import { HeartFilled } from "@ant-design/icons";
-import { Button, Tooltip, ConfigProvider, Space } from "antd";
+import { Button,ConfigProvider, Space } from "antd";
 
 import educationIcon from "./icons/scholarship.png";
 import foodIcon from "./icons/cutlery.png";
 import undefinedType from './icons/empty.png'
 import Scholarship from './icons/fund.png';
 import Infanstructure from './icons/infrastructure.png';
-import techLogo from './icons/robotic-hand.png';
 import specialied from './icons/self-control.png';
 
 export default function PostCard(props: any) {

@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   CreditCardOutlined,
   HomeFilled,
   QuestionCircleOutlined,
   CrownFilled,
 } from "@ant-design/icons";
-import { Menu, Button, Input, ConfigProvider } from "antd";
+import { Menu, Button ,ConfigProvider } from "antd";
 import "./Navbar.css";
 import { SignOutButton } from "@clerk/clerk-react";
 import { useNavigate } from "react-router-dom";
-import { useClerk, useUser } from "@clerk/clerk-react";
+import {  useUser } from "@clerk/clerk-react";
 import userLogo from "../../Images/user.png";
+import { useLocation } from "react-router-dom";
 
 
 const items = [
@@ -79,10 +80,20 @@ const items = [
 ];
 
 const Navbar = () => {
-
+  const location = useLocation();
   const navigate = useNavigate();
   const [current, setCurrent] = useState("/");
 
+
+useEffect(()=>{
+  if(location.pathname === "/createpost"){
+    setCurrent("Features");
+  }
+  if(location.pathname === "/showpost"){
+    setCurrent("Features");
+  }
+
+},[location.pathname]);
 
   const DisplayUserInfo = () => {
     const { user } = useUser();

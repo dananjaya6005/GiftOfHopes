@@ -6,12 +6,12 @@ import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import ShowPost from "./components/Timeline/ShowPost";
 import CreatePost from "./components/Timeline/CreatePost";
-import Navbar from "./components/Nav/NavBar";
+import Navbar from "./components/Nav/Navbar";
 import Payment from "./components/Payment/Payemnt";
 import { useUser } from "@clerk/clerk-react";
 
 function MainRouter() {
-  const { isLoaded, isSignedIn, user } = useUser();
+  const {  isSignedIn } = useUser();
 
   function decideNavBarShowOrNot() {
     if (isSignedIn) {

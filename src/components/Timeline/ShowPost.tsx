@@ -4,8 +4,7 @@ import { createClient } from "@supabase/supabase-js";
 import "./showPost.css";
 import TopBgLogo from "../../Images/TopBg.png";
 
-import PostCard from "../PostCard/postCard";
-import Navbar from "../Nav/NavBar";
+import PostCard from "../PostCard/PostCard";
 import books from "../../Animation/book.gif";
 import donation from "../../Animation/donation.gif";
 import settings from "../../Animation/settings.gif";

@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useClerk, useUser } from "@clerk/clerk-react";
-import { Link } from "react-router-dom";
 import { createClient } from "@supabase/supabase-js";
 import "./Home.css";
 import { Carousel } from "antd";
@@ -12,7 +10,8 @@ import img5 from "../../cropedImages/img5.jpg";
 import videeChild from "../../video/New project.mp4";
 import PostCard from "../PostCard/MiniCard/PostCard";
 import { useNavigate } from "react-router-dom";
-
+import psedit from "../../images/psedit.png";
+import psedit2 from "../../images/psedit2.png";
 const supabase = createClient(
   "https://pjqbnzerwqygskkretxd.supabase.co",
 
@@ -20,26 +19,15 @@ const supabase = createClient(
 );
 
 const contentStyle: React.CSSProperties = {
-  margin: 10,
-  width: "438px",
-  height: "438px",
+  width: "90%",
+  height: "90%",
   color: "#fff",
-  boxShadow: "0 4px 8px 0 rgb(255, 255, 255,0.6)",
+
   lineHeight: "160px",
   textAlign: "center",
   background: "#364d79",
   border: "2px solid #fff",
   borderRadius: "24% 76% 69% 31% / 38% 43% 57% 62% ",
-};
-
-const SignOutButton = () => {
-  const { signOut } = useClerk();
-
-  return (
-    <React.Fragment>
-      <button onClick={() => signOut()}>Sign out</button>
-    </React.Fragment>
-  );
 };
 
 type Post = {
@@ -68,21 +56,16 @@ export default function Home() {
     }
   }
 
-
-
   return (
     <>
-      <video src={videeChild} autoPlay loop muted></video>
+      <video className="bgVideo" src={videeChild} autoPlay loop muted></video>
       <div className="headContainer">
         <div className="TopTextContaniner">
           <h2 className="headTextWrap">Help the children when they need ! </h2>
           <h2 className="secondHeadText">
             Your small act can make a big difference
           </h2>
-          <p
-            className="homeDescription"
-            style={{ fontSize: "17px", padding: 20 }}
-          >
+          <p className="homeDescription">
             Welcome to our platform, where we strive to change lives through
             education. We support underprivileged students by providing
             essential educational resources. Our mission is to ensure every
@@ -95,9 +78,23 @@ export default function Home() {
             support.
           </p>
           <div className="btnContanier">
-          <button onClick={()=>{navigate('/showpost')}} className="btnTwo">Donate now</button>
-          <button onClick={()=>{navigate('/createpost')}} className="btnTwo">Organzie Event</button>
-        </div>
+            <button
+              onClick={() => {
+                navigate("/showpost");
+              }}
+              className="btnTwo"
+            >
+              Donate now
+            </button>
+            <button
+              onClick={() => {
+                navigate("/createpost");
+              }}
+              className="btnTwo"
+            >
+              Organzie Event
+            </button>
+          </div>
         </div>
 
         <div className="slideShow">
@@ -128,33 +125,86 @@ export default function Home() {
       </div>
 
       <div className="secondContext">
-        <h4 className="secondContexttext1">Empower children through <span style={{color:'red'}}>Education</span></h4>
+        <h4 className="secondContexttext1">
+          Empower children through{" "}
+          <span style={{ color: "red" }}>Education</span>
+        </h4>
       </div>
 
       <div className="HomemakeRowStyle">
-  {post &&
-    Array.isArray(post) &&
-    [...post].reverse().slice(0, 3).map((item: Post, index: number) => {
-      return (
-        
-          <PostCard
-            key={index}
-            title={item.title}
-            writter_name={item.writter_name}
-            discription={item.discription}
-            reacts={item.reacts}
-            createDate={item.createDate}
-            type={item.type}
-            location={item.location}
-          />
+        {post &&
+          Array.isArray(post) &&
+          [...post]
+            .reverse()
+            .slice(0, 3)
+            .map((item: Post, index: number) => {
+              return (
+                <PostCard
+                  key={index}
+                  title={item.title}
+                  writter_name={item.writter_name}
+                  discription={item.discription}
+                  reacts={item.reacts}
+                  createDate={item.createDate}
+                  type={item.type}
+                  location={item.location}
+                />
+              );
+            })}
+      </div>
+      <button
+        onClick={() => {
+          navigate("/showpost");
+        }}
+        className="discoverMoreBtn"
+      >
+        Discover More{" "}
+      </button>
+
+      <div className="whyChosesUSWhole">
+        <img src={psedit} alt="psedit" className="psedit" />
+        <div className="whychosesus">
+          <h1 className="whyChooseusH1">Why Choose Us</h1>
+          <div className="whyChosesUSContent">
+            <div className="whyChosesUSContent1">
+              <h2>Our Mission</h2>
+              <p className="smallDiscription">
+                Our mission is to ensure every child has access to quality
+                education, regardless of their background. Your donation can
+                help us provide textbooks, school supplies, and cover tuition
+                fees for those who need it most.
+              </p>
+            </div>
+            <div className="whyChosesUSContent2">
+              <h2>Our Vision</h2>
+              <p className="smallDiscription">
+                Our vision is to create a world where every child has the
+                opportunity to learn and grow. We believe that education is the
+                key to a brighter future, and we want to give children the
+                chance to reach their full potential.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="aboutOurHistory">
+        <div className="aboutOurHistoryContent1">
+          <h1 className="aboutOurHistoryHead">About Our History</h1>
+        <p className="aboutOurHistoryDescription">
+          Founded in 2023, our platform was born out of a vision to empower
+          individuals to drive positive change. We’ve since grown into a global
+          community, facilitating numerous donation events that have impacted
+          countless lives. From scholarships for students to infrastructure
+          development for schools, our history is a testament to the power of
+          collective action. As we look ahead, we’re excited to continue this
+          journey of making a difference.
+        </p>
+        </div>
+
+        <img src={psedit2} alt="psedi2" className="psedit2" />
       
-      );
-    })}
-</div>
-<button onClick={()=>{navigate('/showpost')}} className="discoverMoreBtn">Discover More </button>
-
-
-    
+      </div>
     </>
   );
 }

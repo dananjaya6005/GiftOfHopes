@@ -5,26 +5,36 @@
     min-width :100%;
     min-height: 100vh;
   } */
-.slideShow{
-  height:438px;
-  width:460px;
-  justify-content: flex-end;  
+.slideShow {
+  height: 35%;
+  width: 35%;
+  justify-content: flex-end;
 }
-.carousel{
- display: flex;
 
-
+.homeDescription {
+  font-size: 17px;
+  padding: 20;
 }
-.headContainer{
+
+@media (min-width: 1700px) {
+  .homeDescription {
+    font-size: 1.4rem;
+  }
+}
+
+.carousel {
+  display: flex;
+}
+.headContainer {
   position: absolute;
   top: 100px;
   left: 0;
   display: flex;
   width: 100%;
-  
+
   justify-content: flex-end;
 }
-.head{
+.head {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -33,7 +43,7 @@
   align-items: center;
   text-align: center;
 }
-.TopTextContaniner{
+.TopTextContaniner {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,56 +51,108 @@
   align-items: center;
 }
 
-.headTextWrap{
-  font-family: Kaushan Script , cursive;
+.headTextWrap {
+  font-family: Kaushan Script, cursive;
   font-size: 3rem;
   color: rgb(255, 177, 10);
-  text-shadow: 1px 3px 3px  rgb(12, 11, 0);
+  text-shadow: 1px 3px 3px rgb(12, 11, 0);
 }
-.secondHeadText{
-  font-family: Kaushan Script , cursive;
+.secondHeadText {
+  font-family: Kaushan Script, cursive;
   font-size: 2rem;
   color: rgb(255, 255, 255);
-  text-shadow: 1px 3px 3px  rgb(12, 11, 0);
+  text-shadow: 1px 3px 3px rgb(12, 11, 0);
 }
 
-.homeDescription{
+.homeDescription {
   width: 90%;
   color: rgb(255, 255, 255);
   margin-top: 10px;
-  
 }
-.btnTwo{
+.btnTwo {
   margin-left: 30px;
   width: 200px;
   background-color: rgb(175, 128, 0);
   height: 50px;
   transition: 1000ms;
-  &:hover{
+  &:hover {
     background-color: rgb(109, 75, 0);
     color: rgb(255, 255, 255);
   }
 }
-.secondContext{
+.secondContext {
   margin: 0;
 }
 
-.secondContexttext1{
+.secondContexttext1 {
   color: rgb(62, 62, 62);
   font-size: 2.6rem;
-  font-family: 'Caveat';
+ 
+  
 }
 
-.HomemakeRowStyle{
+.HomemakeRowStyle {
   display: flex;
   width: 100%;
   transform: scale(0.8);
   margin-top: -79px;
-  
 }
 
-.discoverMoreBtn{
-  background-color:rgb(50, 34, 0) ;
+.discoverMoreBtn {
+  background-color: rgb(50, 34, 0);
   border-radius: 10px;
 }
 
+.whyChosesUSWhole {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  flex-direction: row;
+}
+
+.whychosesus {
+  width: 50%;
+}
+.psedit {
+  width: 35%;
+  height: 35%;
+}
+
+.bgVideo {
+  width: 100%;
+  height: 100%;
+}
+
+.smallDiscription{
+  margin-top: 10px;
+
+}
+
+.whyChooseusH1{
+  font-size:xx-large;
+  color: blueviolet;
+}
+
+.aboutOurHistory{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.psedit2{
+  width: 30%;
+  height: 30%;
+}
+
+.aboutOurHistoryContent1{
+  width: 60%;
+}
+
+.aboutOurHistoryHead{
+  font-size: xx-large;
+  color: blueviolet;
+}
+.aboutOurHistoryDescription{
+  margin-top: 10px;
+  font-size: 20px;
+}
