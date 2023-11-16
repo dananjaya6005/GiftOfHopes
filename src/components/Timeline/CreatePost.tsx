@@ -99,14 +99,10 @@ export default function CreatePost() {
             Every event you create is a beacon of hope, illuminating the path to
             joy and happiness in someone’s life. Whether it’s a charity run, a
             community clean-up, or a fundraising dinner, your event can make a
-            significant difference. Each event is a unique tapestry of change,
-            woven with threads of hope and compassion. They are platforms for
+            significant difference. They are platforms for
             voices to be heard, dreams to be shared, and lives to be
-            transformed. They are catalysts that set in motion ripples of
-            positive change. So, go ahead and create your event. Ignite the
-            spark of change. Be the sculptor of joy and architect of happiness
-            in someone’s life. Remember, every big change starts with a small
-            step. And your event could be the first step on someone’s journey
+            transformed. Please, go ahead and create your event. Whether it's for yourself or a larger organization. Remember, every big change starts with a small
+            step. And your event could be the first step on the journey
             towards a brighter, happier tomorrow.
           </p>
 
@@ -122,7 +118,7 @@ export default function CreatePost() {
         <Form layout="vertical" className="FormItself">
           <Form.Item label="Title">
             <Input
-              placeholder="Title"
+              placeholder="Title of the event"
               onChange={(event) => {
                 setTitle(event.target.value);
               }}
@@ -131,7 +127,7 @@ export default function CreatePost() {
 
           <Form.Item label="Writter Name">
             <Input
-              placeholder="Writter Name"
+              placeholder="Event Organizer Name"
               onChange={(event) => {
                 setWritter_name(event.target.value);
               }}
@@ -140,20 +136,20 @@ export default function CreatePost() {
 
           <Form.Item label="Event Location">
             <Input
-              placeholder="Where is Your Event Taking Place ? "
+              placeholder="Where is Your Event Taking Place? Leave Personal for personal events"
               onChange={(event) => {
                 setLocation(event.target.value);
               }}
             />
           </Form.Item>
 
-          <Form.Item label="Discription">
+          <Form.Item label="Description">
             <TextArea
               onChange={(event) => {
                 setDiscription(event.target.value);
               }}
               rows={4}
-              placeholder="max Length is 300 words"
+              placeholder="Max Length is 300 words"
               maxLength={700}
             />
           </Form.Item>
@@ -180,7 +176,7 @@ export default function CreatePost() {
 
           <Form.Item label="Donation Type">
             <Select
-              defaultValue="Undefined"
+              defaultValue="Personal"
               style={{ display: "flex", width: 300, textAlign: "left" }}
               onChange={(value) => {
                 setType(value);
@@ -233,16 +229,16 @@ export default function CreatePost() {
               },
               {
                 title: " Date and Location",
-                description: " When is Your Event Happening ?",
+                description: " When and where is Your Event Happening?",
               },
               {
-                title: "Discription",
-                description: "Tell us more about your event !",
+                title: "Description",
+                description: "Tell us more about your event!",
               },
 
               {
                 title: "Reacts & Type",
-                description: "Tell us more which type of event you need !",
+                description: "Tell us more which type of event you have!",
               },
             ]}
           />

@@ -53,11 +53,11 @@ export default function ShowPost() {
           </h2>
           <br />
           <h3 className="ShowPostSubtext" style={{ margin: "0px", padding: "0px", fontSize: "23px", color:'#ffeaab' }}>
-            Be the Change You Wish to See
+            Be the change you wish to see.
           </h3>
           <div  style={{marginTop:40}} className="subtextStynle">
 
-          <p style={{fontWeight:800 ,  color:'#ffab10'}}>Make a Donation</p>
+          <p style={{fontWeight:800 ,  color:'#ffab10'}}>Make a Donation!</p>
           <p style={{paddingTop:10,  color:'white' }}>
             Once you’ve found an event you’d like to support, you can make a
             donation. Every contribution, no matter how small, can have a big
@@ -71,10 +71,10 @@ export default function ShowPost() {
           <p style={{  color:'white',marginTop: "1px", fontSize: "1rem",textAlign:'left',fontStyle:"italic" }}>
             Welcome to our donation events page, a platform where you can
             explore various initiatives aimed at making a positive impact. Each
-            event represents a cause, be it education, healthcare, or disaster
-            relief, and offers you an opportunity to contribute. Browse through
+            event represents a cause, be it education, healthcare, disaster
+            relief or personal help, and offers you an opportunity to contribute. Browse through
             these events, discover causes you feel passionate about, and see how
-            your donations can make a difference. Remember, every contribution
+            you can make a difference. Remember, every contribution
             counts and has the potential to bring about significant change. So,
             explore, donate, and be the change you wish to see in the world.
           </p>
