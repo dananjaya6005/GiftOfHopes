@@ -1,23 +1,34 @@
+
 import "./Payment.css";
 import { Button } from "antd";
 import payImg from "../../Images/Payment Information-bro.png";
 import {  useUser } from "@clerk/clerk-react";
 import { useState,useEffect} from "react";
 
+
+
+
 export default function Payment() {
-const [userName, setUserName] = useState('')
 
 
-  const DisplayUserInfo = () => {
-    const { user } = useUser();
+const [ClientName,setClientName] = useState('')
+const { user } = useUser();
+
+useEffect(()=>{
+  FetchuserInfo();
   
-    return (
-      <div style={{fontWeight:'600', fontFamily:'Franklin Gothic Medium'}}>
-       {user?.firstName} {user?.lastName}
-      </div>
-    );
-  };
-  
+  },[]);
+
+const FetchuserInfo = () => {
+
+  setClientName(user?.firstName);
+  console.log(ClientName);
+
+
+};
+
+
+
   return (
     <>
       <div className="paymentRoot">
@@ -79,7 +90,7 @@ const [userName, setUserName] = useState('')
           shape="round"
           size="large"
           onClick={() => {
-            window.location.href = `https://donate.stripe.com/test_14k7vS6HE8NZb2E289?client_reference_id=${userName}`;
+            window.location.href = `https://donate.stripe.com/test_14k7vS6HE8NZb2E289?client_reference_id=${ClientName}`;
           }}
         >
           Ready for Payment

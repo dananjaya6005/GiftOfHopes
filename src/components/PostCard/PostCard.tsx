@@ -52,7 +52,13 @@ export default function PostCard(props: any) {
               <p className="title">{props.title}</p>
               <p className="date">{props.createDate}</p>
             </div>
-            <p className="type">{props.type}</p>
+
+            <div className="maketypeandId">
+              <p className="Eventid">Event ID - {props.id}</p>
+              <p className="type">{props.type}</p>
+            </div>
+            
+            
             <p className="writter">{props.writter_name}</p>
           </div>
         </div>

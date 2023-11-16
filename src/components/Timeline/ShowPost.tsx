@@ -18,6 +18,7 @@ const supabase = createClient(
 );
 
 type Post = {
+  id: number;
   title: string;
   writter_name: string;
   discription: string;
@@ -101,6 +102,7 @@ export default function ShowPost() {
             return (
               <PostCard
                 key={index}
+                id={item.id}
                 title={item.title}
                 writter_name={item.writter_name}
                 discription={item.discription}
