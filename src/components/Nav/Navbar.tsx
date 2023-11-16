@@ -49,30 +49,26 @@ const items = [
     children: [
       {
         type: "group",
-        label: "Item 1",
+        label: "Mission and Team",
         children: [
           {
-            label: "Option 1",
+            label: "Our Mission",
             key: "setting:1",
           },
           {
-            label: "Option 2",
+            label: "Our Team",
             key: "setting:2",
           },
         ],
       },
       {
         type: "group",
-        label: "Item 2",
+        label: "Impact",
         children: [
           {
-            label: "Option 3",
+            label: "Our Work",
             key: "setting:3",
-          },
-          {
-            label: "Option 4",
-            key: "setting:4",
-          },
+          }
         ],
       },
     ],

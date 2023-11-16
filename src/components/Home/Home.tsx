@@ -66,21 +66,18 @@ export default function Home() {
       <video className="bgVideo" src={videeChild} autoPlay loop muted></video>
       <div className="headContainer">
         <div className="TopTextContaniner">
-          <h2 className="headTextWrap">Help the children when they need ! </h2>
+          <h2 className="headTextWrap">Help the children get a better Education! </h2>
           <h2 className="secondHeadText">
-            Your small act can make a big difference
+            Your small act can make a big difference.
           </h2>
           <p className="homeDescription">
             Welcome to our platform, where we strive to change lives through
-            education. We support underprivileged students by providing
+            education. We support underprivileged students and educational institutes by providing
             essential educational resources. Our mission is to ensure every
             child has access to quality education, regardless of their
             background. Your donation can help us provide textbooks, school
             supplies, and cover tuition fees for those who need it most.
-            Together, we can break the cycle of poverty and empower our children
-            to reach their full potential. Every child deserves a chance to
-            shine, and your contribution can light their way. Thank you for your
-            support.
+            Together, we can break the cycle of poverty and empower our children. If you yourself a student in need of financial aid, Please feel free to create a donation event yourself to attract potential donars.
           </p>
           <div className="btnContanier">
             <button
@@ -97,7 +94,7 @@ export default function Home() {
               }}
               className="btnTwo"
             >
-              Organzie Event
+              Organize Event
             </button>
           </div>
         </div>
@@ -132,7 +129,7 @@ export default function Home() {
       <div className="secondContext">
         <h4 className="secondContexttext1">
           Empower children through{" "}
-          <span style={{ color: "red" }}>Education</span>
+          <span style={{ color: "green" }}>Education</span>
         </h4>
       </div>
 
@@ -177,7 +174,7 @@ export default function Home() {
                 Our mission is to ensure every child has access to quality
                 education, regardless of their background. Your donation can
                 help us provide textbooks, school supplies, and cover tuition
-                fees for those who need it most.
+                fees for those who need it the most.
               </p>
             </div>
             <div className="whyChosesUSContent2">
@@ -186,7 +183,7 @@ export default function Home() {
                 Our vision is to create a world where every child has the
                 opportunity to learn and grow. We believe that education is the
                 key to a brighter future, and we want to give children the
-                chance to reach their full potential.
+                chance to pursue that goal without having to worry about their monetary statues.
               </p>
             </div>
           </div>
@@ -198,7 +195,7 @@ export default function Home() {
           <h1 className="aboutOurHistoryHead">About Our History</h1>
         <p className="aboutOurHistoryDescription">
           Founded in 2023, our platform was born out of a vision to empower
-          individuals to drive positive change. We’ve since grown into a global
+          individuals to drive positive change in the world. We’ve since grown into a global
           community, facilitating numerous donation events that have impacted
           countless lives. From scholarships for students to infrastructure
           development for schools, our history is a testament to the power of
