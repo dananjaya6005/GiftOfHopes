@@ -57,9 +57,9 @@ export default function SignInForm() {
 
     <React.Fragment>
 
-    <h3 className="HeadLogin">Gift Of Hope</h3>
+    <h3 className="HeadLogin">Gifts Of Hope</h3>
     <p>Welcome back to our circle of kindness! </p>
-    <p className="secondsubtext">Your generosity has the power to make a world of difference. Log in and let’s continue this journey of giving together !</p>
+    <p className="secondsubtext">Your generosity has the power to make a difference. Log in and let’s continue this journey of giving, together!</p>
     <hr/>
     <img  src={loginLogo} alt="logo" className="loginLogo"/>
 
@@ -79,7 +79,7 @@ export default function SignInForm() {
         <button style={{margin:20}} onClick={handleSubmit}>Sign In</button>
       </form>
       
-        <Link to='/signup'>Don't have an account ? </Link>
+        <Link to='/signup'>Don't have an account? </Link>
       
 
     </div>

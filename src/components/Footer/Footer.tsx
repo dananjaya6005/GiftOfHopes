@@ -4,10 +4,10 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__addr">
-        <h1 className="footer__logo">Gift of Hopes</h1>
-        <h2 className='conatct'>Contact</h2>
+        <h1 className="footer__logo">Gifts of Hope</h1>
+        <h2 className='conatct'>Contact us</h2>
         <address>
-        Hatton Study Centre, St. Gabriel Convent<br />
+        +94 71-8843104 / +94 719021938<br />
         
         </address>
       </div>
@@ -38,7 +38,7 @@ const Footer = () => {
         </li>
       </ul>
       <div className="legal">
-        <p>© 2023 Gift Of hopes Donation Platform. All rights reserved.</p>
+        <p>© 2023 Gifts Of hope Donation Platform, All rights reserved.</p>
         <div className="legal__links">
           <span>Made with <span className="heart">♥</span> for a better world</span>
         </div>

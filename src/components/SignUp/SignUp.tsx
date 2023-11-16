@@ -100,8 +100,8 @@ export default function SignUp() {
       {!pendingVerification &&(
             
             <div>
-              <h3 className="headSignUp">Hello ! Create a fresh account </h3>
-              <p className="subtextSignUp">Join us our misson to empower the future generation through donation</p>
+              <h3 className="headSignUp">Welcome! Create a fresh account. </h3>
+              <p className="subtextSignUp">Join us on our misson to empower the future generations through donation.</p>
               <hr/>
               <img  src={LogoSignUp} alt="logo" className="LogoSignUp"/>
             </div>
