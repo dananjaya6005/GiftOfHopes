@@ -1,15 +1,20 @@
 import "./postCard.css";
 import { HeartFilled } from "@ant-design/icons";
 import { Button,ConfigProvider, Space } from "antd";
-
+import { useNavigate } from "react-router-dom";
 import educationIcon from "./icons/scholarship.png";
 import foodIcon from "./icons/cutlery.png";
 import undefinedType from './icons/empty.png'
 import Scholarship from './icons/fund.png';
 import Infanstructure from './icons/infrastructure.png';
 import specialied from './icons/self-control.png';
+import tech from './icons/robotic-hand.png';
+
+
 
 export default function PostCard(props: any) {
+ const navigate = useNavigate();
+
 
   let IconType = undefinedType;
 
@@ -28,7 +33,9 @@ export default function PostCard(props: any) {
   else if(props.type === 'Specialized Programs'){
     IconType = specialied;
   }
-
+  else if (props.type === 'Tech For Education'){
+    IconType = tech;
+  }
 
 
 
@@ -80,6 +87,7 @@ export default function PostCard(props: any) {
               <Button
                 className="CustomDonateBtn"
                 type="primary"
+                onClick={()=>{navigate('/payment')}}
                 icon={<HeartFilled />}
               >
                 Donate

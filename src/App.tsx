@@ -11,16 +11,12 @@ import {
 
 import MainRouter from "./MainRouter";
 
-
 const clerkPubKey = 'pk_test_YW11c2luZy1raW5nZmlzaC0zNC5jbGVyay5hY2NvdW50cy5kZXYk';
-
 
 function App() {
 
-
-
   return (
-  
+    
     <BrowserRouter>
     <ClerkProvider publishableKey={clerkPubKey} >
       <MainRouter/>

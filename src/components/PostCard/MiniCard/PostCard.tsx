@@ -5,7 +5,7 @@ import foodIcon from "./icons/cutlery.png";
 import undefinedType from './icons/empty.png'
 import Scholarship from './icons/fund.png';
 import Infanstructure from './icons/infrastructure.png';
-
+import tech from './icons/robotic-hand.png';
 import specialied from './icons/self-control.png';
 
 export default function PostCard(props: any) {
@@ -26,6 +26,9 @@ export default function PostCard(props: any) {
   }
   else if(props.type === 'Specialized Programs'){
     IconType = specialied;
+  }
+  else if (props.type === 'Tech For Education'){
+    IconType = tech;
   }
 
 

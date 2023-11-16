@@ -206,6 +206,10 @@ export default function CreatePost() {
                   value: "Educational Materials",
                   label: "Educational Materials",
                 },
+                {
+                  value: "Tech For Education",
+                  label: "Tech For Education",
+                },
               ]}
             />
           </Form.Item>
