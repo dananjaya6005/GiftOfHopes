@@ -1,15 +1,11 @@
-
+//@ts-nocheck
 import "./Payment.css";
 import { Button } from "antd";
 import payImg from "../../Images/Payment Information-bro.png";
 import {  useUser } from "@clerk/clerk-react";
 import { useState,useEffect} from "react";
 
-
-
-
 export default function Payment() {
-
 
 const [ClientName,setClientName] = useState('')
 const { user } = useUser();
@@ -61,7 +57,7 @@ const FetchuserInfo = () => {
             <li className="stepTitle">Don't Know the Event ID? 🙄</li>
             <ul className="description">
               If you're unsure about the Donation Event ID, please navigate back
-              to the Event Explore page. You can find the ID associated with
+              to the <a href="/showpost">Event Explore page</a>. You can find the ID associated with
               each event there.
             </ul>
             <li className="stepTitle">Enter the Donation Event ID 😏</li>

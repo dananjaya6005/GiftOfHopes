@@ -44,3 +44,14 @@ p{
     color: rgb(10, 51, 82);
     opacity: 0.3;
 }
+
+
+@media only screen and (min-width: 1700px) {
+    .loginLogo{
+        width: 25%;
+    }
+    .wholeBody{
+        margin-top: 5%;
+    }
+    
+  }
