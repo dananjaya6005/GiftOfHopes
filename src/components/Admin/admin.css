@@ -33,3 +33,43 @@
     
 }
 
+.adminLogo{
+    width: 22%;
+    
+}
+
+.adminTitleTextDescription{
+    font-size: 1rem;
+    font-weight:400;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+
+}
+
+.adminTitleText{
+    font-size: 1.3rem;
+    font-weight:400;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+.adminTitle{
+    text-align: left;
+   width: 60%;
+    
+
+}
+
+.adminLogoandrest{
+    display: flex;
+    margin: 20px;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    
+}
