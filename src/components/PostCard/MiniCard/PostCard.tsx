@@ -36,23 +36,23 @@ export default function PostCard(props: any) {
 
   return (
     <>
-      <div className="postCard">
-        <div className="mainHeaderAll">
-          <div className="imageContain">
-            <img className="icon" src={IconType} alt="TypeIocn" />
+      <div className="postCard-s">
+        <div className="mainHeaderAll-s">
+          <div className="imageContain-s">
+            <img className="icon-s" src={IconType} alt="TypeIocn" />
           </div>
 
-          <div className="makeSomthing">
-            <div className="titleAnddate">
-              <p className="title">{props.title}</p>
+          <div className="makeSomthing-s">
+            <div className="titleAnddate-s">
+              <p className="title-s">{props.title}</p>
              
             </div>
-            <p className="type">{props.type}</p>
-            <p className="writter">{props.writter_name}</p>
+            <p className="type-s">{props.type}</p>
+            <p className="writter-s">{props.writter_name}</p>
           </div>
         </div>
 
-        <p className="discription">{props.discription}</p>
+        <p className="discription-s">{props.discription}</p>
         
 
         {/*         

@@ -53,7 +53,7 @@ export default function ShowPost() {
             Explore Donation Events
           </h2>
           <br />
-          <h3 className="ShowPostSubtext" style={{ margin: "0px", padding: "0px", fontSize: "23px", color:'#ffeaab' }}>
+          <h3 className="ShowPostSubtext" style={{ margin: "0px", padding: "0px", color:'#ffeaab' }}>
             Be the change you wish to see.
           </h3>
           <div  style={{marginTop:40}} className="subtextStynle">
