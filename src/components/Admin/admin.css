@@ -1,0 +1,35 @@
+.tablePaymentInfo{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    text-align: center;
+}
+
+.tableView{
+    display: flex;
+    justify-content: center;
+}
+
+.headatable{
+    background-color: #3a3422;
+    color: white;
+    
+}
+.headingTitleIndividual{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 500 ;
+    
+}
+.dataRow{
+    border: 1px solid #ddd;
+    font-size: 0.9rem;
+    color: #223a36;
+    
+}
+

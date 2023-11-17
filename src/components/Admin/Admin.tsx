@@ -2,7 +2,8 @@
 
 import {useState,useEffect } from "react";
 import { createClient } from "@supabase/supabase-js";
-
+import { table } from "console";
+import './admin.css';
 
 const supabase = createClient(
     "https://pjqbnzerwqygskkretxd.supabase.co",
@@ -25,7 +26,7 @@ const Admin =()=>{
         const timestampNew = 1700160772; // replace with your timestamp
         const date = new Date(timestampNew * 1000); // JavaScript uses milliseconds
         console.log(date);
-        const localDateStr = date.toLocaleString();
+        const localDateStr = date.toLocaleDateString();
 
         return localDateStr;
 
@@ -38,23 +39,36 @@ const Admin =()=>{
       }
     return(
         <div>
-           {
-             paymentInfo && Array.isArray(paymentInfo) && 
-             paymentInfo.map((item,index)=>{
-                return(
-                    <>
-                    <div>{item.id}</div>
-                    <div>{item.donation_id}</div>
-                    <div>{item.full_name}</div>
-                    <div>{item.email}</div>
-                    <div>{(item.amount/100).toFixed(2)}</div>
-                    <div>{Localdate(item.timestamp)}</div>
-                    
-                    </>
-                )
-             })
-            }
-            
+           <div className="tableView">
+            <table className="tablePaymentInfo">
+                <thead className="headatable">
+                    <tr className="hadingAlltitle">
+                        <th className="headingTitleIndividual">ID</th>
+                        <th className="headingTitleIndividual" >Donation ID</th>
+                        <th className="headingTitleIndividual" >Full Name</th>
+                        <th className="headingTitleIndividual" >Email</th>
+                        <th className="headingTitleIndividual" >Amount</th>
+                        <th className="headingTitleIndividual">Date</th>
+                    </tr>
+                </thead>
+                <tbody className="databody">
+                    {paymentInfo && Array.isArray(paymentInfo) && 
+                        paymentInfo.map((item, index) => {
+                            return (
+                                <tr key={index} className="dataRow">
+                                    <td>{item.id}</td>
+                                    <td>{item.donation_id}</td>
+                                    <td>{item.full_name}</td>
+                                    <td>{item.email}</td>
+                                    <td>{(item.amount/100).toFixed(2)}</td>
+                                    <td>{Localdate(item.timestamp)}</td>
+                                </tr>
+                            )
+                        })
+                    }
+                </tbody>
+            </table>
+        </div>
         </div>
     )
 }
