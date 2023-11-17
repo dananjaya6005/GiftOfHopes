@@ -33,6 +33,10 @@ const items = [
         label: "Explore Events",
         key: "/showpost",
       },
+      {
+        label: "Log as Admin",
+        key: "/admin",
+      },
 
     ]
   },
@@ -88,6 +92,7 @@ useEffect(()=>{
   if(location.pathname === "/showpost"){
     setCurrent("Features");
   }
+  
 
 },[location.pathname]);
 
@@ -133,6 +138,10 @@ useEffect(()=>{
               setCurrent(key);
             }
             else if(key === "/payment"){
+              navigate(key)
+              setCurrent(key);
+            }
+            else if(key === "/admin"){
               navigate(key)
               setCurrent(key);
             }

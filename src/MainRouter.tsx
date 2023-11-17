@@ -9,7 +9,7 @@ import CreatePost from "./components/Timeline/CreatePost";
 import Navbar from "./components/Nav/Navbar";
 import Payment from "./components/Payment/Payemnt";
 import { useUser } from "@clerk/clerk-react";
-
+import Admin from "./components/Admin/admin";
 
 
 function MainRouter() {
@@ -34,6 +34,7 @@ function MainRouter() {
         <Route path="/showpost" element={<ShowPost />} />
         <Route path="/createpost" element={<CreatePost />} />
         <Route path="/payment" element={<Payment />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
       {
       
