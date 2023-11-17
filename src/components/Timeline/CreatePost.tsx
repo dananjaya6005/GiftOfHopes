@@ -95,7 +95,7 @@ export default function CreatePost() {
           <h2 className="subtxt" style={{ fontSize: "xx-large", color: "#e67300" }}>
             Someone will Smiles Tomorrow !
           </h2>
-          <p style={{fontSize:"14px",paddingTop:"30px"}}>
+          <p className="crerePostDescription" style={{paddingTop:"30px"}}>
             Every event you create is a beacon of hope, illuminating the path to
             joy and happiness in someone’s life. Whether it’s a charity run, a
             community clean-up, or a fundraising dinner, your event can make a

@@ -186,4 +186,27 @@ body {
     height: 60px;
     font-size: 1.5rem;
  }
+
+ .discoverMoreBtn{
+    width: 250px;
+    height: 60px;
+    font-size: 1.5rem;
+ }
+
+ .whyChosesUSWhole{
+    margin-top: 3rem;
+    font-size: 1.3rem; ;
+ }
+
+ .whyChooseusH1{
+    font-size: 2.5rem;
+ }
+ .aboutOurHistory{
+    margin-top: 3rem;
+    font-size: 1.3rem; ;
+ }
+
+ .aboutOurHistoryHead{
+    font-size: 2.5rem;
+ }
 }
