@@ -142,7 +142,7 @@ useEffect(()=>{
               setCurrent(key);
             }
             else if(key === "/admin"){
-              navigate(key)
+              navigate('/checkadminauth')
               setCurrent(key);
             }
 
