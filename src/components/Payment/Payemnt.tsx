@@ -4,6 +4,9 @@ import { Button } from "antd";
 import payImg from "../../Images/Payment Information-bro.png";
 import {  useUser } from "@clerk/clerk-react";
 import { useState,useEffect} from "react";
+import AppFooter from "../Footer/Footer";
+
+
 
 export default function Payment() {
 
@@ -92,6 +95,8 @@ const FetchuserInfo = () => {
           Ready for Payment
         </Button>
       </div>
+      <br /><br /><br /><br />
+      <AppFooter />
     </>
   );
 }

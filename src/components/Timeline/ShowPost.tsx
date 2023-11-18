@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { createClient } from "@supabase/supabase-js";
 import "./showPost.css";
 import TopBgLogo from "../../Images/TopBg.png";
-
+import AppFooter from "../Footer/Footer";
 import PostCard from "../PostCard/PostCard";
 import books from "../../Animation/book.gif";
 import donation from "../../Animation/donation.gif";
@@ -114,6 +114,8 @@ export default function ShowPost() {
             );
           })}
       </div>
+      <br /><br /><br /><br /><br />
+      <AppFooter />
     </React.Fragment>
   );
 }

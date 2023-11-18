@@ -73,3 +73,18 @@
     justify-content: space-evenly;
     
 }
+
+@media only screen and (min-width: 1700px) {
+    .adminTitleTextDescription{
+        font-size: 1.1rem;
+    }
+    .adminTitleText{
+        font-size: 1.8rem;
+    }
+    .adminTitle{
+        width: 50%;
+    }
+    .adminLogo{
+        width: 18%;
+    }
+}

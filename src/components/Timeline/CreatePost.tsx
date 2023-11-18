@@ -4,7 +4,7 @@ import { Button, Form, Input, Select, Steps } from "antd";
 import "./CreatePost.css";
 import Bigimage from "../../Images/Donation-image-removebg-preview.png";
 import { Alert } from "antd";
-
+import AppFooter from "../Footer/Footer";
 const { TextArea } = Input;
 
 const supabase = createClient(
@@ -270,6 +270,8 @@ export default function CreatePost() {
           )
         }
       </div>
+      <br /><br /><br />
+      <AppFooter />
     </div>
   );
 }
