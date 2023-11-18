@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { createClient } from "@supabase/supabase-js";
 import "./Home.css";
@@ -14,8 +13,7 @@ import { useNavigate } from "react-router-dom";
 import psedit from "../../images/psedit.png";
 import psedit2 from "../../images/psedit2.png";
 import AppFooter from "../Footer/Footer";
-
-
+import feedbacklogo from '../../Images/Feedback-pana.png';
 
 const supabase = createClient(
   "https://pjqbnzerwqygskkretxd.supabase.co",
@@ -66,18 +64,23 @@ export default function Home() {
       <video className="bgVideo" src={videeChild} autoPlay loop muted></video>
       <div className="headContainer">
         <div className="TopTextContaniner">
-          <h2 className="headTextWrap">Help the children get a better Education! </h2>
+          <h2 className="headTextWrap">
+            Help the children get a better Education!{" "}
+          </h2>
           <h2 className="secondHeadText">
             Your small act can make a big difference.
           </h2>
           <p className="homeDescription">
             Welcome to our platform, where we strive to change lives through
-            education. We support underprivileged students and educational institutes by providing
-            essential educational resources. Our mission is to ensure every
-            child has access to quality education, regardless of their
-            background. Your donation can help us provide textbooks, school
-            supplies, and cover tuition fees for those who need it most.
-            Together, we can break the cycle of poverty and empower our children. If you yourself a student in need of financial aid, Please feel free to create a donation event yourself to attract potential donars.
+            education. We support underprivileged students and educational
+            institutes by providing essential educational resources. Our mission
+            is to ensure every child has access to quality education, regardless
+            of their background. Your donation can help us provide textbooks,
+            school supplies, and cover tuition fees for those who need it most.
+            Together, we can break the cycle of poverty and empower our
+            children. If you yourself a student in need of financial aid, Please
+            feel free to create a donation event yourself to attract potential
+            donars.
           </p>
           <div className="btnContanier">
             <button
@@ -183,7 +186,8 @@ export default function Home() {
                 Our vision is to create a world where every child has the
                 opportunity to learn and grow. We believe that education is the
                 key to a brighter future, and we want to give children the
-                chance to pursue that goal without having to worry about their monetary statues.
+                chance to pursue that goal without having to worry about their
+                monetary statues.
               </p>
             </div>
           </div>
@@ -193,26 +197,42 @@ export default function Home() {
       <div className="aboutOurHistory">
         <div className="aboutOurHistoryContent1">
           <h1 className="aboutOurHistoryHead">About Our History</h1>
-        <p className="aboutOurHistoryDescription">
-          Founded in 2023, our platform was born out of a vision to empower
-          individuals to drive positive change in the world. We’ve since grown into a global
-          community, facilitating numerous donation events that have impacted
-          countless lives. From scholarships for students to infrastructure
-          development for schools, our history is a testament to the power of
-          collective action. As we look ahead, we’re excited to continue this
-          journey of making a difference.
-        </p>
+          <p className="aboutOurHistoryDescription">
+            Founded in 2023, our platform was born out of a vision to empower
+            individuals to drive positive change in the world. We’ve since grown
+            into a global community, facilitating numerous donation events that
+            have impacted countless lives. From scholarships for students to
+            infrastructure development for schools, our history is a testament
+            to the power of collective action. As we look ahead, we’re excited
+            to continue this journey of making a difference.
+          </p>
         </div>
 
         <img src={psedit2} alt="psedi2" className="psedit2" />
-      
       </div>
 
+      <div className="FeedbackContainer">
+        <div className="FeedbackContainer1">
+          <h3 className="FeedbackContainer1Head">We Value Your Feedback!</h3>
+          <p className="FeedbackContainer1Description">
+            At our company, we believe that your feedback is crucial for our
+            growth and improvement. We are committed to providing the best
+            experience for our users and your insights help us do just that. We
+            have created a simple and user-friendly feedback form for you to
+            share your thoughts and suggestions. By clicking the button below,
+            you will be navigated to a Google Form where you can provide us with
+            your valuable feedback.
+          </p>
 
-        <AppFooter/>
-       
+            <button>
+            <a className="feedbackColor" href="https://docs.google.com/forms/d/e/1FAIpQLSfqtyPD0v_o-B6EI34GagyDlflYNK-HqxVvx0oBgMDvj-bfTg/viewform">Add your feedback</a>
+            </button>
+           
+        </div>
+        <img src={feedbacklogo} className="feedbacklogo" alt="" />
+      </div>
 
-
+      <AppFooter />
     </>
   );
 }
