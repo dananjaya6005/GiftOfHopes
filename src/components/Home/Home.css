@@ -2,6 +2,7 @@ body {
 
     min-width :100%;
     min-height: 100vh;
+    
   }
 
 
@@ -159,6 +160,7 @@ body {
   margin-top: 10px;
   
   
+  
 }
 
 .FeedbackContainer{
@@ -236,6 +238,24 @@ body {
 
  .aboutOurHistoryHead{
     font-size: 2.5rem;
+ }
+
+ .FeedbackContainer1Head{
+    font-size: 2.5rem;
+ }
+ .FeedbackContainer1Description{
+    font-size: 1.5rem;
+ }
+
+ .feedbacklogo{
+    width: 25%;
+ }
+
+ .feedbackBtn{
+  margin-top: 20px;
+    width: 250px;
+    height: 60px;
+    font-size: 1.3rem;
  }
 }
 

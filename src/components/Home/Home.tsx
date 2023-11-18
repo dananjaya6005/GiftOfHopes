@@ -224,7 +224,7 @@ export default function Home() {
             your valuable feedback.
           </p>
 
-            <button>
+            <button  className="feedbackBtn">
             <a className="feedbackColor" href="https://docs.google.com/forms/d/e/1FAIpQLSfqtyPD0v_o-B6EI34GagyDlflYNK-HqxVvx0oBgMDvj-bfTg/viewform">Add your feedback</a>
             </button>
            

@@ -2,7 +2,7 @@
 
 .footer {
   position: relative;
-  width: 99vw; /* Adjusted to 99vw for viewport width */
+  width: 100%; /* Adjusted to 99vw for viewport width */
   background: #ffbf35;
   min-height: 27px; /* Adjusted the min-height to make it 10% shorter */
   padding: 20px 0; /* Adjusted padding to 0 for full width */
@@ -41,7 +41,7 @@
 }
 
 .menu__link {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #211010;
   margin: 0 10px;
   display: inline-block;
@@ -49,6 +49,21 @@
   text-decoration: none;
   opacity: 0.75;
   font-weight: 300;
+  font-weight: 600;
+}
+
+.footer__top{
+  display: flex;
+  width: 20%;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+}
+
+.iconSocailMedia{
+  
+  color: #633804;
+
 }
 
 .menu__link:hover {
@@ -123,3 +138,4 @@
   
   width: 100%;
 }
+
