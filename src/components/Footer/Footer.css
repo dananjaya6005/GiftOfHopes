@@ -3,7 +3,7 @@
 .footer {
   position: relative;
   width: 99vw; /* Adjusted to 99vw for viewport width */
-  background: #3586ff;
+  background: #ffbf35;
   min-height: 27px; /* Adjusted the min-height to make it 10% shorter */
   padding: 20px 0; /* Adjusted padding to 0 for full width */
   display: flex;
@@ -72,7 +72,7 @@
   left: 0;
   width: 99vw; /* Adjusted to 99vw for viewport width */
   height: 27px; /* Adjusted the height */
-  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background: url('../../Images/wave-blue1.png');
   background-size: 1000px 27px; /* Adjusted the background-size */
 }
 
@@ -94,14 +94,14 @@
 .wave#wave3 {
   z-index: 1000;
   opacity: 0.2;
-  bottom: 10px; /* Adjusted the bottom */
+  bottom: 10px; 
   animation: animateWaves 3s linear infinite;
 }
 
 .wave#wave4 {
   z-index: 999;
   opacity: 0.7;
-  bottom: 15px; /* Adjusted the bottom */
+  bottom: 15px;
   animation: animate 3s linear infinite;
 }
 
