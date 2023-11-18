@@ -1,12 +1,9 @@
-import { useEffect, useState,useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import { createClient } from "@supabase/supabase-js";
 import { Button, Form, Input, Select, Steps } from "antd";
 import "./CreatePost.css";
 import Bigimage from "../../Images/Donation-image-removebg-preview.png";
-
-
-
-
+import { Alert } from "antd";
 
 const { TextArea } = Input;
 
@@ -25,9 +22,8 @@ export default function CreatePost() {
   const [type, setType] = useState("");
   const [location, setLocation] = useState("");
   const [stepsValue, setStepsValue] = useState(0);
-
-
-  
+  const [showAlert, setShowAlert] = useState(false);
+  const [buttonEnable, setButtonEnable] = useState(true);
 
   useEffect(() => {
     const nowdate = new Date().toISOString().slice(0, 10);
@@ -47,6 +43,7 @@ export default function CreatePost() {
       },
     ]);
     console.log(data, error);
+    handleAlert();
   };
 
   useEffect(() => {
@@ -73,44 +70,60 @@ export default function CreatePost() {
       title.length > 1
     ) {
       setStepsValue(5);
+      setButtonEnable(false);
     }
+  }
+
+  function handleAlert() {
+    setShowAlert(true);
+   setTimeout(()=>{
+    setShowAlert(false);
+   },3000);
   }
 
   const myDiv = useRef<HTMLDivElement>(null);
   const FoucstoForm = () => {
     if (myDiv.current) {
-      myDiv.current.scrollIntoView({ behavior: 'smooth',  });
+      myDiv.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
-
-
-
   return (
     <div>
-      
       <div className="HeaderContainer">
         <div className="Header">
-          <h2 className="MainHead" style={{ color: "#005580" }}>Be the Reason</h2>
-          <h2 className="subtxt" style={{ fontSize: "xx-large", color: "#e67300" }}>
+          <h2 className="MainHead" style={{ color: "#005580" }}>
+            Be the Reason
+          </h2>
+          <h2
+            className="subtxt"
+            style={{ fontSize: "xx-large", color: "#e67300" }}
+          >
             Someone will Smiles Tomorrow !
           </h2>
-          <p className="crerePostDescription" style={{paddingTop:"30px"}}>
+          <p className="crerePostDescription" style={{ paddingTop: "30px" }}>
             Every event you create is a beacon of hope, illuminating the path to
             joy and happiness in someone’s life. Whether it’s a charity run, a
             community clean-up, or a fundraising dinner, your event can make a
-            significant difference. They are platforms for
-            voices to be heard, dreams to be shared, and lives to be
-            transformed. Please, go ahead and create your event. Whether it's for yourself or a larger organization. Remember, every big change starts with a small
-            step. And your event could be the first step on the journey
-            towards a brighter, happier tomorrow.
+            significant difference. They are platforms for voices to be heard,
+            dreams to be shared, and lives to be transformed. Please, go ahead
+            and create your event. Whether it's for yourself or a larger
+            organization. Remember, every big change starts with a small step.
+            And your event could be the first step on the journey towards a
+            brighter, happier tomorrow.
           </p>
 
-          <Button type="primary" onClick={FoucstoForm}>Let's  get start</Button>
+          <Button type="primary" onClick={FoucstoForm}>
+            Let's get start
+          </Button>
         </div>
 
         <div className="Bigimage">
-          <img className="bigLogoImage" src={Bigimage} alt="Help us to build the child world !" />
+          <img
+            className="bigLogoImage"
+            src={Bigimage}
+            alt="Help us to build the child world !"
+          />
         </div>
       </div>
 
@@ -211,7 +224,7 @@ export default function CreatePost() {
           </Form.Item>
 
           <Form.Item>
-            <Button type="primary" onClick={handleSubmit}>
+            <Button disabled={buttonEnable} type="primary" onClick={handleSubmit}>
               Submit
             </Button>
           </Form.Item>
@@ -243,6 +256,19 @@ export default function CreatePost() {
             ]}
           />
         </div>
+      </div>
+      <div className="succesfullyInsertMsg">
+        {
+          showAlert &&
+          (
+          <Alert
+            message="Success Create Your Event"
+            description="To view your event go to the Explore event section.Leatest event will be shown first."
+            type="success"
+            showIcon
+          />
+          )
+        }
       </div>
     </div>
   );

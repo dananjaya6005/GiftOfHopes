@@ -13,6 +13,22 @@
   margin-top: 20px; /* Added margin-top for distance from the rest of the webpage */
 }
 
+
+
+.footer {
+  position: relative;
+  width: 100%; /* Adjusted to 100% for full viewport width */
+  background: #3586ff;
+  min-height: 27px;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  /* Add this to hide any content that overflows */
+}
+
 .footer > * {
   width: 100%;
   box-sizing: border-box; /* Include padding and border in the width calculation */
@@ -70,7 +86,7 @@
   position: absolute;
   top: -27px; /* Adjusted the height */
   left: 0;
-  width: 99vw; /* Adjusted to 99vw for viewport width */
+  width: 100%; /* Adjusted to 99vw for viewport width */
   height: 27px; /* Adjusted the height */
   background: url("https://i.ibb.co/wQZVxxk/wave.png");
   background-size: 1000px 27px; /* Adjusted the background-size */
@@ -121,4 +137,9 @@
   100% {
     background-position-x: 0px;
   }
+}
+.footerConatiner{
+  display: flex;
+  
+  width: 100%;
 }

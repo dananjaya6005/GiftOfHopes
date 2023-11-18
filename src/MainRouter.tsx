@@ -9,7 +9,7 @@ import CreatePost from "./components/Timeline/CreatePost";
 import Navbar from "./components/Nav/Navbar";
 import Payment from "./components/Payment/Payemnt";
 import { useUser } from "@clerk/clerk-react";
-import Admin from "./components/Admin/admin";
+import Admin from "./components/Admin/Admin";
 import CheckAdminAuth from "./components/Admin/CheckAdminAuth";
 
 function MainRouter() {

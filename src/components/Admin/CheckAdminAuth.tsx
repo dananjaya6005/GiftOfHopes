@@ -6,7 +6,7 @@ import './checkAdminauth.css'
 
 export default function CheckAdminAuth() {
     const navigate = useNavigate()
-    const [admin, setAdmin] = useState({
+    const [admin] = useState({
         username: 'admin',
         password: 'admin'
     });

@@ -2,6 +2,7 @@ import './Footer.css';
 
 const Footer = () => {
   return (
+  <div className="footerConatiner">
     <footer className="footer">
     <div className="waves">
       <div className="wave" id="wave1"></div>
@@ -19,6 +20,7 @@ const Footer = () => {
     </ul>
     <p>&copy;2021 Nadine Coelho | All Rights Reserved</p>
   </footer>
+  </div>
   );
 };
 

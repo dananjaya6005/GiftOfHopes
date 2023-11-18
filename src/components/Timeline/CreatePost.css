@@ -85,3 +85,11 @@ h2 {
   }
  
 }
+.succesfullyInsertMsg{
+  width: 70%;
+  left:0;
+  right: 0;
+  margin: auto ;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
