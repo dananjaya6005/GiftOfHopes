@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 import {  useUser } from "@clerk/clerk-react";
 import userLogo from "../../Images/user.png";
 import { useLocation } from "react-router-dom";
+import { AiFillIdcard } from "react-icons/ai";
 
 
 const items = [
@@ -77,6 +78,11 @@ const items = [
       },
     ],
   },
+  {
+    label: "About US",
+    key: "/About",
+    icon: <AiFillIdcard />,
+  },
 ];
 
 const Navbar = () => {
@@ -138,6 +144,10 @@ useEffect(()=>{
               setCurrent(key);
             }
             else if(key === "/payment"){
+              navigate(key)
+              setCurrent(key);
+            }
+            else if(key === "/About"){
               navigate(key)
               setCurrent(key);
             }
