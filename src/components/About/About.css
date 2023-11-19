@@ -9,7 +9,11 @@
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+<<<<<<< Updated upstream
     overflow: hidden; /* Add overflow property to contain floated elements */
+=======
+    overflow: hidden;
+>>>>>>> Stashed changes
   }
   
   .header {
@@ -39,9 +43,13 @@
     line-height: 1.6;
   }
   
+<<<<<<< Updated upstream
   /* Add specific styles for founder information and images if needed */
   
   /* Styling for the founders section */
+=======
+ 
+>>>>>>> Stashed changes
   .founders {
     display: flex;
     flex-wrap: wrap;
@@ -49,13 +57,21 @@
   }
   
   .founder-card {
+<<<<<<< Updated upstream
     width: calc(30% - 20px); /* Adjusted width with margin */
+=======
+    width: calc(30% - 20px); 
+>>>>>>> Stashed changes
     margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+<<<<<<< Updated upstream
     box-sizing: border-box; /* Add box-sizing property */
+=======
+    box-sizing: border-box; 
+>>>>>>> Stashed changes
   }
   
   .founder-image {
@@ -68,6 +84,7 @@
     padding: 15px;
   }
   
+<<<<<<< Updated upstream
   /* Styling for the call-to-action section */
   .call-to-action {
     text-align: center;
@@ -75,4 +92,13 @@
   }
   
   /* Add additional styles as needed for specific elements and sections */
+=======
+  
+  .call-to-action {
+    text-align: center;
+    clear: both; 
+  }
+  
+
+>>>>>>> Stashed changes
   
