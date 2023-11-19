@@ -25,11 +25,7 @@ const About: React.FC = () => {
         <p>
           Our team of founders comprises passionate individuals committed to making a difference. Through collaboration and determination, we strive to create a positive impact on the future of those in need. Get to know us and our stories below.
         </p>
-<<<<<<< Updated upstream
         {/* Add individual founder information and images here */}
-=======
-       
->>>>>>> Stashed changes
       </div>
       <div className="impact">
         <h2>Impact So Far</h2>
@@ -39,23 +35,12 @@ const About: React.FC = () => {
       </div>
       <div className="call-to-action">
         <p>
-<<<<<<< Updated upstream
           Join us in spreading hope and making a difference. Your support can change lives and contribute to a better future for the children and students of Sri Lanka.
         </p>
         {/* Add a donation button or link here */}
-=======
-          Join  with us in spreading hope and making a difference. Your support can change lives and contribute to a better future for the children and students of Sri Lanka.
-        </p>
-        
->>>>>>> Stashed changes
       </div>
     </div>
   );
 }
 
 export default About;
-<<<<<<< Updated upstream
-=======
-
-//git push -u origin test
->>>>>>> Stashed changes
