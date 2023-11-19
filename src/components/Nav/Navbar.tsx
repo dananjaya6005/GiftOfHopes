@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 import {  useUser } from "@clerk/clerk-react";
 import userLogo from "../../Images/user.png";
 import { useLocation } from "react-router-dom";
+import { AiFillIdcard } from "react-icons/ai";
 
 
 const items = [
@@ -57,25 +58,20 @@ const items = [
         children: [
           {
             label: "Our Mission",
-            key: "setting:1",
+            key: "/Mission",
           },
           {
             label: "Our Team",
-            key: "setting:2",
+            key: "/Team",
           },
         ],
       },
-      {
-        type: "group",
-        label: "Impact",
-        children: [
-          {
-            label: "Our Work",
-            key: "setting:3",
-          }
-        ],
-      },
     ],
+  },
+  {
+    label: "About US",
+    key: "/About",
+    icon: <AiFillIdcard />,
   },
 ];
 
@@ -138,6 +134,18 @@ useEffect(()=>{
               setCurrent(key);
             }
             else if(key === "/payment"){
+              navigate(key)
+              setCurrent(key);
+            }
+            else if(key === "/About"){
+              navigate(key)
+              setCurrent(key);
+            }
+            else if(key === "/Team"){
+              navigate(key)
+              setCurrent(key);
+            }
+            else if(key === "/Mission"){
               navigate(key)
               setCurrent(key);
             }
