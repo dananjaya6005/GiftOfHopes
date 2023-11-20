@@ -7,15 +7,35 @@
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+    overflow: hidden; 
   }
   
   .header {
     text-align: center;
     margin-bottom: 20px;
+  }
+  .AboutHeading{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  .AboutHeadingDes{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  }
+
+  .MeetOurFoundersDes{
+    margin-top: 20px;
+  }
+  .resetParaInAboutus{
+    margin-top: 20px;
+  }
+
+  .aboutUSmissonpara{
+    margin-top: 20px;
+  }
+
+  .aboutUSmissonDes{
+    margin-bottom: 30px;
   }
   
   .intro,
@@ -24,35 +44,9 @@
   .impact,
   .call-to-action {
     margin-bottom: 30px;
-    width: 60%;
   }
+  
 
-  .person-story {
-    /* Adjust width to leave space for the text */
-    width: 30%;
-  }
-
-  .person-story img {
-    /* Add styles for the person's image */
-    width: 100%;
-    height: auto;
-  }
-  
-  h1, h2 {
-    color: #4CAF50;
-  }
-  
-  h2 {
-    border-bottom: 2px solid #4CAF50;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-  }
-  
-  p {
-    line-height: 1.6;
-    padding-top: 50px;
-  }
-  
   
   /* styling for the founders section */
   .founders {

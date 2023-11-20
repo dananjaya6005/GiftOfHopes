@@ -14,6 +14,41 @@
     text-align: center;
     margin-bottom: 20px;
   }
+
+  .membercard{
+    width: 25%;
+    background-color: #ffffff;
+    height: fit-content;
+    border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   margin: 5px;
+  
+  }
+  .TeamWhywetryHead{
+    margin: 30px;
+  }
+
+  .memberName{
+    padding: 0;
+    margin: 0;
+  }
+
+  .teamClassMembersWhole{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .Cardcontext{
+    padding: 10px;
+    text-align: center;
+  }
+
+  .imgMemmber{
+    width: 100%;
+    border-radius: 10px;
+  
+  }
   
   .intro,
   .mission,
@@ -23,22 +58,7 @@
     margin-bottom: 30px;
   }
   
-  h1, h2 {
-    color: #4CAF50;
-  }
-  
-  h2 {
-    border-bottom: 2px solid #4CAF50;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-  }
-  
-  p {
-    line-height: 1.6;
-    padding-top: 50px;
-  }
-  
-  
+
   /* styling for the founders section */
   .founders {
     display: flex;
@@ -69,4 +89,13 @@
   .call-to-action {
     text-align: center;
     clear: both;
+  }
+
+  .team-members {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .team-member {
+    text-align: center;
   }
