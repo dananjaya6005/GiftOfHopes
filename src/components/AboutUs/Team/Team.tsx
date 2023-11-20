@@ -1,17 +1,12 @@
 import React from "react";
 import "./Team.css";
-import founders1 from "../../../Images/team/1.jpg";
-import founders2 from "../../../Images/team/2.jpg";
-import founders3 from "../../../Images/team/3.jpg";
-import founders4 from "../../../Images/team/4.jpg";
 import founders5 from "../../../Images/team/jump.jpg";
-
 import maleDp from "../../../Images/team/maledp.jpg";
 import femaleDp from "../../../Images/team/femaledp.jpg";
 
 import AppFooter from "../../Footer/Footer";
 
-const About: React.FC = () => {
+const Team: React.FC = () => {
   return (
     <>
       <div className="about-container">
@@ -113,4 +108,4 @@ const About: React.FC = () => {
   );
 };
 
-export default About;
+export default Team;

@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import {
   CreditCardOutlined,
   HomeFilled,
-  QuestionCircleOutlined,
   CrownFilled,
 } from "@ant-design/icons";
 import { Menu, Button ,ConfigProvider } from "antd";
@@ -48,13 +47,13 @@ const items = [
     disabled: false,
   },
   {
-    label: "Help",
+    label: "About",
     key: "SubMenu",
-    icon: <QuestionCircleOutlined />,
+    icon: <AiFillIdcard />,
     children: [
       {
         type: "group",
-        label: "Mission and Team",
+        label: "About Us",
         children: [
           {
             label: "Our Mission",
@@ -64,15 +63,16 @@ const items = [
             label: "Our Team",
             key: "/Team",
           },
+          {
+            label: "Who Are we ?",
+            key: "/About",
+          },
+         
         ],
       },
     ],
   },
-  {
-    label: "About US",
-    key: "/About",
-    icon: <AiFillIdcard />,
-  },
+  
 ];
 
 const Navbar = () => {

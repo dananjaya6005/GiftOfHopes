@@ -3,9 +3,6 @@ import { Route, Routes } from "react-router-dom";
 import SignUp from "./components/SignUp/SignUp";
 import Login from "./components/LogIn/LogIn";
 import Home from "./components/Home/Home";
-import About from "./components/AboutUs/About";
-import Team from "./components/AboutUs/Team/Team";
-import Mission from "./components/AboutUs/Mission/Mission";
 import ShowPost from "./components/Timeline/ShowPost";
 import CreatePost from "./components/Timeline/CreatePost";
 import Navbar from "./components/Nav/Navbar";
@@ -13,6 +10,10 @@ import Payment from "./components/Payment/Payemnt";
 import { useUser } from "@clerk/clerk-react";
 import Admin from "./components/Admin/Admin";
 import CheckAdminAuth from "./components/Admin/CheckAdminAuth";
+
+import About from "./components/AboutUs/About";
+import Team from "./components/AboutUs/Team/Team";
+import Mission from "./components/AboutUs/Mission/Mission";
 
 function MainRouter() {
   const {  isSignedIn } = useUser();
