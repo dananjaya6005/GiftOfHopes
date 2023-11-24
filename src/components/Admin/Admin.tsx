@@ -19,8 +19,8 @@ const Admin = () => {
   }, []);
 
   function Localdate(timestamp: any) {
-    const timestampNew = 1700160772; // replace with your timestamp
-    const date = new Date(timestampNew * 1000); // JavaScript uses milliseconds
+    const timestampNew = 1700160772; 
+    const date = new Date(timestampNew * 1000); 
     console.log(date);
     const localDateStr = date.toLocaleDateString();
 
