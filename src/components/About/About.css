@@ -23,12 +23,29 @@
   .impact,
   .call-to-action {
     margin-bottom: 30px;
+<<<<<<< Updated upstream:src/components/About/About.css
+=======
+    width: 60%;
+  }
+
+  .person-story {
+    
+    width: 30%;
+  }
+
+  .person-story img {
+    
+    width: 100%;
+    height: auto;
+    
+>>>>>>> Stashed changes:src/components/AboutUs/Mission/Mission.css
   }
   
   h1, h2 {
     color: #4CAF50;
   }
   
+<<<<<<< Updated upstream:src/components/About/About.css
   h2 {
     border-bottom: 2px solid #4CAF50;
     padding-bottom: 5px;
@@ -42,6 +59,9 @@
   /* Add specific styles for founder information and images if needed */
   
   /* Styling for the founders section */
+=======
+ 
+>>>>>>> Stashed changes:src/components/AboutUs/Mission/Mission.css
   .founders {
     display: flex;
     flex-wrap: wrap;
