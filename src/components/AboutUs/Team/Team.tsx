@@ -68,15 +68,9 @@ const Team: React.FC = () => {
               </div>
             </div>
           </div>
-
-
-
-
-
         </div>
 
         
-
         <div className="mission">
           <h2 className="TeamWhywetryHead">Why we try</h2>
           <p>
@@ -100,7 +94,7 @@ const Team: React.FC = () => {
             We hope you join us in making a better tomorrow for the children of
             Sri Lanka and around the world.
           </p>
-          {/* Add a donation button or link here */}
+          {/* left to add a donate button */}
         </div>
       </div>
       <AppFooter />

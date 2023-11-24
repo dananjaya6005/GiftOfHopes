@@ -23,12 +23,10 @@
   }
 
   .MisssionHeadingTextDes{
-    font-famil: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 
-.arjuans-stroy{
 
-}
 .instance-stroy-des{
   margin-top: 20px;
   font-size: large;
@@ -50,19 +48,18 @@
   }
 
   .person-story {
-    /* Adjust width to leave space for the text */
+    /* adjust width to leave space for the text */
     width: 30%;
   }
 
   .person-story img {
-    /* Add styles for the person's image */
+    /* add styles for the person's image */
     width: 100%;
     height: auto;
     
   }
   
 
-  
   /* styling for the founders section */
   .founders {
     display: flex;

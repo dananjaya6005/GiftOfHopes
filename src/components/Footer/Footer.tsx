@@ -1,26 +1,26 @@
+import {Link} from 'react-router-dom';
 import './Footer.css';
-import { FacebookFilled,YoutubeFilled,LinkedinFilled,PhoneFilled } from '@ant-design/icons';
+import { FacebookFilled,YoutubeFilled,LinkedinFilled } from '@ant-design/icons';
+
+
 
 const Footer = () => {
+  
   return (
   <div className="footerConatiner">
 
-  
     <footer className="footer">
     <div className="footer__top">
-      <div className="iconSocailMedia">
-      <FacebookFilled/>
-      </div>
-      <div className="iconSocailMedia">
-      <LinkedinFilled/>
-      </div>
-      <div className="iconSocailMedia">
-      <YoutubeFilled/>
-      </div>
-      <div className="iconSocailMedia">
-      <PhoneFilled/>
-      </div>
-    
+    <a className="iconSocailMedia" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+    <FacebookFilled />
+  </a>
+  <a className="iconSocailMedia" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+    <LinkedinFilled />
+  </a>
+  <a className="iconSocailMedia" href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
+    <YoutubeFilled />
+  </a>
+  
     
     </div>
     
@@ -32,13 +32,12 @@ const Footer = () => {
     </div>
     
     <ul className="menu">
-      <li className="menu__item"><a className="menu__link" href="#">Home</a></li>
-      <li className="menu__item"><a className="menu__link" href="#">About</a></li>
-      <li className="menu__item"><a className="menu__link" href="#">Services</a></li>
-      <li className="menu__item"><a className="menu__link" href="#">Team</a></li>
-      <li className="menu__item"><a className="menu__link" href="#">Contact</a></li>
+      <li className="menu__item"><Link className="menu__link" to="/">Home</Link></li>
+      <li className="menu__item"><Link className="menu__link" to="/about">About</Link></li>
+      <li className="menu__item"><Link className="menu__link" to="/mission">Services</Link></li>
+      <li className="menu__item"><Link className="menu__link" to="/team">Team</Link></li>
     </ul>
-    <p>&copy;2023 Gift Of Hope | All Rights Reserved</p>
+    <p>&copy;2023 Gifts Of Hope | All Rights Reserved</p>
   </footer>
   </div>
   );
