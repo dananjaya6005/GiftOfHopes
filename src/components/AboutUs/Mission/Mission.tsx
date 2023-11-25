@@ -68,7 +68,7 @@ const About: React.FC = () => {
         <p className='instance-stroy-des'>
           Join us in spreading hope and making a difference. Your support can change lives and contribute to a better future for the children and students of Sri Lanka!
         </p>
-        {/* Add a donation button or link here */}
+        {/* left to add a donate button */}
       </div>
     </div>
     <AppFooter />

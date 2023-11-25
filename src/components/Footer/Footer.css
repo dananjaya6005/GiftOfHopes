@@ -10,23 +10,21 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 25px; 
+  margin-top: 25px;
+  text-align: center; 
 }
-
-
-
 
 
 .footer > * {
   width: 100%;
-  box-sizing: border-box; /* Include padding and border in the width calculation */
+  box-sizing: border-box; /* include padding and border in the width calculation */
 }
 
 .social-icon,
-
 .social-icon__item,
 .menu__item {
   list-style: none;
+  margin: 0 10px;
 }
 
 .social-icon__link {
@@ -56,12 +54,19 @@
   display: flex;
   width: 20%;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
 
 }
 
+.menu{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
 .iconSocailMedia{
-  
+  margin: 0 10px;
   color: #633804;
 
 }
@@ -135,7 +140,6 @@
 }
 .footerConatiner{
   display: flex;
-  
   width: 100%;
 }
 
