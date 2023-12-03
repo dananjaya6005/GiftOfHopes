@@ -99,7 +99,7 @@ export default function CreatePost() {
             className="subtxt"
             style={{ fontSize: "xx-large", color: "#e67300" }}
           >
-            Someone will Smiles Tomorrow !
+            Someone will Smile Tomorrow!
           </h2>
           <p className="crerePostDescription" style={{ paddingTop: "30px" }}>
             Every event you create is a beacon of hope, illuminating the path to
