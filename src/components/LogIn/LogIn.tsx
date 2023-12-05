@@ -57,8 +57,10 @@ export default function SignInForm() {
         <hr />
         <img src={loginLogo} alt="logo" className="loginLogo" />
 
-        <div>
-          <form>
+        <div style={{ display:'flex',
+        flexDirection:'column', alignItems:'center',
+         justifyContent:'center'}}>
+          <form style={{width:'450px'}}>
             <div>
               <label htmlFor="email"></label>
               <Input
@@ -88,9 +90,17 @@ export default function SignInForm() {
                 prefix={<LockOutlined />}
               />
             </div>
-            <button style={{ margin: 20 }} onClick={handleSubmit}>
+
+            <div style={{display:'flex' ,flexDirection:"column"}}>
+            <a style={{textAlign:'right', marginTop:15, cursor:'pointer'}} onClick={()=>{navigate('/resetpassword')}} >reset password </a>
+
+            <button className="SignInbtnOverride" style={{ margin: 20}} onClick={handleSubmit}>
               Sign In
             </button>
+            
+
+            </div>
+           
           </form>
 
           <Link to="/signup">Don't have an account? </Link>

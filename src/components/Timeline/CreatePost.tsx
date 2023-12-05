@@ -17,7 +17,7 @@ export default function CreatePost() {
   const [title, setTitle] = useState("");
   const [writter_name, setWritter_name] = useState("");
   const [discription, setDiscription] = useState("");
-  const [reacts, setReacts] = useState(0);
+  const [nic, setNic] = useState("");
   const [createDate, setCreateDate] = useState("");
   const [type, setType] = useState("");
   const [location, setLocation] = useState("");
@@ -36,7 +36,7 @@ export default function CreatePost() {
         title,
         writter_name,
         discription,
-        reacts,
+        nic,
         createDate,
         type,
         location,
@@ -49,7 +49,7 @@ export default function CreatePost() {
   useEffect(() => {
     processSteps();
     console.log(stepsValue);
-  }, [title, location, discription, reacts]);
+  }, [title, location, discription, nic]);
 
   function processSteps() {
     if (title.length > 1) {
@@ -64,7 +64,7 @@ export default function CreatePost() {
     }
 
     if (
-      reacts >= 1 &&
+      nic.length >= 1 &&
       discription.length > 1 &&
       location.length > 1 &&
       title.length > 1
@@ -167,11 +167,11 @@ export default function CreatePost() {
             />
           </Form.Item>
 
-          <Form.Item label="Reacts">
+          <Form.Item label="nic">
             <Input
-              placeholder="Reacts"
+              placeholder="Enter Your Nic Number"
               onChange={(event) => {
-                setReacts(parseInt(event.target.value));
+                setNic(event.target.value);
               }}
             />
           </Form.Item>
@@ -250,7 +250,7 @@ export default function CreatePost() {
               },
 
               {
-                title: "Reacts & Type",
+                title: "Nic number & Type",
                 description: "Tell us more which type of event you have!",
               },
             ]}

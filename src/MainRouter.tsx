@@ -10,7 +10,7 @@ import Payment from "./components/Payment/Payemnt";
 import { useUser } from "@clerk/clerk-react";
 import Admin from "./components/Admin/Admin";
 import CheckAdminAuth from "./components/Admin/CheckAdminAuth";
-
+import ResetPassword from "./components/ResetPass/ResetPass";
 import About from "./components/AboutUs/About";
 import Team from "./components/AboutUs/Team/Team";
 import Mission from "./components/AboutUs/Mission/Mission";
@@ -41,6 +41,7 @@ function MainRouter() {
         <Route path="/payment" element={<Payment />} />
         <Route path="/admin" element={<Admin />} />
         <Route path="/checkadminauth" element={<CheckAdminAuth />} />
+        <Route path="/resetpassword" element={<ResetPassword />} />
       </Routes>
       {
       

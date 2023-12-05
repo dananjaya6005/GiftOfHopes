@@ -41,6 +41,9 @@ export default function SignUp() {
         username,
         firstName,
         lastName,
+      
+        
+      
       });
 
       // send the email.
