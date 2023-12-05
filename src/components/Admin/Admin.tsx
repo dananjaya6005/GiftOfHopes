@@ -12,26 +12,31 @@ const supabase = createClient(
 
 const Admin = () => {
   const [paymentInfo, setPaymentInfo] = useState([]);
-  const [formated_amount, setFormated_amount] = useState(0);
+  const [donationIdFilter, setDonationIdFilter] = useState("");
 
   useEffect(() => {
     GetPaymentInfo();
   }, []);
 
   function Localdate(timestamp: any) {
-    const timestampNew = 1700160772; // replace with your timestamp
-    const date = new Date(timestampNew * 1000); // JavaScript uses milliseconds
-    console.log(date);
+    const date = new Date(timestamp * 1000);
     const localDateStr = date.toLocaleDateString();
-
     return localDateStr;
   }
 
   async function GetPaymentInfo() {
-    const { data } = await supabase.from("Payment_info").select();
-    setPaymentInfo(data);
-    console.log(data);
+    try {
+      const { data } = await supabase.from("Payment_info").select();
+      setPaymentInfo(data);
+    } catch (error) {
+      console.error("Error fetching payment info:", error.message);
+    }
   }
+
+  const filteredPaymentInfo = paymentInfo.filter((item) =>
+  item.donation_id.includes(donationIdFilter)
+);
+
   return (
     <div>
       <div className="adminLogoandrest">
@@ -59,6 +64,13 @@ const Admin = () => {
         </div>
       </div>
       <div className="tableView">
+        {/* Add the input field for filtering by donation ID */}
+        <input
+          type="text"
+          placeholder="Enter Donation ID"
+          value={donationIdFilter}
+          onChange={(e) => setDonationIdFilter(e.target.value)}
+        />
         <table className="tablePaymentInfo">
           <thead className="headatable">
             <tr className="hadingAlltitle">
@@ -71,11 +83,10 @@ const Admin = () => {
             </tr>
           </thead>
           <tbody className="databody">
-            {paymentInfo &&
-              Array.isArray(paymentInfo) &&
-              paymentInfo.map((item, index) => {
-                return (
-                  <tr key={index} className="dataRow">
+          {donationIdFilter === "" ? (
+              // Render all rows if no donation ID is entered
+              paymentInfo.map((item, index) => (
+                <tr key={index} className="dataRow">
                     <td>{item.id}</td>
                     <td>{item.donation_id}</td>
                     <td>{item.full_name}</td>
@@ -83,8 +94,20 @@ const Admin = () => {
                     <td>{(item.amount / 100).toFixed(2)}</td>
                     <td>{Localdate(item.timestamp)}</td>
                   </tr>
-                );
-              })}
+                ))
+          ):(
+             // Render filtered rows if a donation ID is entered
+             filteredPaymentInfo.map((item, index) => (
+              <tr key={index} className="dataRow">
+                <td>{item.id}</td>
+                <td>{item.donation_id}</td>
+                <td>{item.full_name}</td>
+                <td>{item.email}</td>
+                <td>{(item.amount / 100).toFixed(2)}</td>
+                <td>{Localdate(item.timestamp)}</td>
+              </tr>
+            ))
+          )}
           </tbody>
         </table>
       </div>
