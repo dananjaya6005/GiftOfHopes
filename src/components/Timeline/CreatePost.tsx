@@ -107,14 +107,14 @@ export default function CreatePost() {
             community clean-up, or a fundraising dinner, your event can make a
             significant difference. They are platforms for voices to be heard,
             dreams to be shared, and lives to be transformed. Please, go ahead
-            and create your event. Whether it's for yourself or a larger
+            and create your event, Whether it's for yourself or a larger
             organization. Remember, every big change starts with a small step.
             And your event could be the first step on the journey towards a
             brighter, happier tomorrow.
           </p>
 
           <Button type="primary" onClick={FoucstoForm}>
-            Let's get start
+            Let's get started
           </Button>
         </div>
 
