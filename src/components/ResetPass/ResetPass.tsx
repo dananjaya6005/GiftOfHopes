@@ -1,6 +1,6 @@
 import  { SyntheticEvent, useState } from 'react';
 import { useSignIn } from '@clerk/clerk-react';
-import { useNavigate } from 'react-router-dom';
+
  
 const ResetPassword = () => {
 
@@ -14,7 +14,7 @@ const ResetPassword = () => {
  
   const { isLoaded, signIn, setActive } = useSignIn();
  
-  const navigate = useNavigate();
+
   if (!isLoaded) {
     return null;
   }

@@ -1,15 +1,6 @@
-Import React from 'react';
 
-const styles = {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '100vh',
-    margin: 0,
-    backgroundColor: '#f8f8f8',
-    fontFamily: 'Arial, sans-serif',
-    textAlign: 'center',
-};
+
+
 
 const errorCodeStyle = {
     fontSize: '5em',
@@ -21,7 +12,7 @@ const errorTextStyle = {
 };
 
 const NotFoundPage = () => (
-    <div style={styles}>
+    <div>
         <div>
             <div style={errorCodeStyle}>404</div>
             <div style={errorTextStyle}>Page Not Found</div>
