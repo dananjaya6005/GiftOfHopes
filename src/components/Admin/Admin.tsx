@@ -27,9 +27,9 @@ const Admin = () => {
   }, [refreshFlag]);
 
   
-
+{/* use this to get the dates to show on the payments table */}
   function Localdate(timestamp: any) {
-    const timestampNew = 1700160772; 
+    const timestampNew = timestamp; 
     const date = new Date(timestampNew * 1000); 
   
     const localDateStr = date.toLocaleDateString();
@@ -49,6 +49,7 @@ const Admin = () => {
     console.log(data);
   }
 
+  {/* this function is used on the event table to delete events from that red button */}
   async function DeletePost(id: any) {
     const { error } = await supabase
     .from('Timeline')
@@ -66,9 +67,17 @@ const Admin = () => {
   
   }
 
- function filterByEmail(text:any){
-    const formattedSearchTerm = text.toLowerCase();
-    const filteredData = paymentInfo.filter((item) => item.email.includes(formattedSearchTerm));
+  {/* use this function to do the filtering on the table by event id value*/}
+ function filterByEvent(text:any){
+  const formattedSearchTerm = text.toString().toLowerCase();
+  const filteredData = paymentInfo.filter((item) =>
+    item.donation_id.toString().includes(formattedSearchTerm)
+  );
+
+  {/* use
+  const formattedSearchTerm = text.toLowerCase();
+  const filteredData = paymentInfo.filter((item) => item.email.includes(formattedSearchTerm));
+  for text*/}
    
     setPaymentInfo(filteredData);
 
@@ -78,30 +87,27 @@ const Admin = () => {
  }
 
 
-
-
   return (
     <div>
       <div className="adminLogoandrest">
         <img src={adminLogo} className="adminLogo" alt="adminLogo" />
         <div className="adminTitle">
           <h1 className="adminTitleText">
-            You Logged in with Admin Privileges !
+            You Logged in with Admin Privileges!
           </h1>
           <p className="adminTitleTextDescription">
-            You can view the complete payment history in the table below. Each
-            row represents a transaction with details such as ID, Donation ID,
+            You can view the complete payment history from the table below. Each
+            row represents a transaction with details such as ID, Event ID,
             Full Name, Email, Amount, and date.
           </p>
 
           <p className="adminTitleTextDescription">
-            If new payments are made while you’re on this page, click the
+            If new payments are made while you’re on this page, click the browser
             ‘Refresh’ button to update the table with the latest transactions.
           </p>
 
           <p className="adminTitleTextDescription">
-            To delete a Donation event, click the <a href="">Database</a> and
-            naviagte to the Donation table. Click the ‘Delete’ button next to
+            To delete a Donation event, from the Donation table, Click the ‘Delete’ button next to
             the event you want to delete.
           </p>
         </div>
@@ -109,8 +115,9 @@ const Admin = () => {
       <div style={{textAlign:'center',justifySelf:'center'}}>Payment History Table </div>
 
 
+{/* the text field to filter the below table by event id */}
       <div >
-        <input onChange={(e)=>{filterByEmail(e.target.value)}}
+        <input onChange={(e)=>{filterByEvent(e.target.value)}}
         style={{
          width : '300px',
          color:'black',
@@ -121,18 +128,16 @@ const Admin = () => {
           marginBottom:'10px'
 
          }}
-        type="text" placeholder="search by email"/>
+        type="text" placeholder="search by event id"/>
       </div>
 
-
+{/* table which shows payment information */}
       <div className="tableView">
-        
         <table className="tablePaymentInfo">
-          
           <thead className="headatable">
             <tr className="hadingAlltitle">
-              <th className="headingTitleIndividual">ID</th>
-              <th className="headingTitleIndividual">Title</th>
+              <th className="headingTitleIndividual">P_ID</th>
+              <th className="headingTitleIndividual">Event ID</th>
               <th className="headingTitleIndividual">Full Name</th>
               <th className="headingTitleIndividual">Email</th>
               <th className="headingTitleIndividual">Amount</th>
@@ -149,7 +154,7 @@ const Admin = () => {
                     <td>{item.donation_id}</td>
                     <td>{item.full_name}</td>
                     <td>{item.email}</td>
-                    <td>{(item.amount / 100).toFixed(2)}</td>
+                    <td>{(item.amount / 100).toFixed(2)}</td> {/* supabase saves in cents. divide to convert from cents to proper values */}
                     <td>{Localdate(item.timestamp)}</td>
                   </tr>
                 );
@@ -159,6 +164,7 @@ const Admin = () => {
       </div>
 
 
+{/* this table shows donation events */}
       <div className="tableView">
         <table className="tablePaymentInfo">
         <caption className="tableCaption"> Donation Event Table </caption>
@@ -187,7 +193,6 @@ const Admin = () => {
                         DeletePost(item.id);
                       } } type="primary" icon={<DeleteFilled />}  />
 
-                    
                       </>
 
                       }</td>
@@ -214,18 +219,14 @@ const Admin = () => {
           }}>
         
           <Alert
-            message="Success Delete the Event"
-            description="To view your event go to the Explore event section.Leatest event will be shown first."
+            message="Successful Deletion of the Event"
+            description="To view available events go to the Explore events section."
             type="warning"
             showIcon
           />
           </div>
           )
         }
-
-
-
-
 
     </div>
   );

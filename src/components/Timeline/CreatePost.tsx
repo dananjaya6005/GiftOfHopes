@@ -64,7 +64,7 @@ export default function CreatePost() {
     }
 
     if (
-      nic.length >= 1 &&
+      nic.length >= 6 &&
       discription.length > 1 &&
       location.length > 1 &&
       title.length > 1
@@ -122,7 +122,7 @@ export default function CreatePost() {
           <img
             className="bigLogoImage"
             src={Bigimage}
-            alt="Help us to build the child world !"
+            alt="Help us to build a better world for the children!"
           />
         </div>
       </div>
@@ -138,9 +138,9 @@ export default function CreatePost() {
             />
           </Form.Item>
 
-          <Form.Item label="Writter Name">
+          <Form.Item label="Event Creator Name">
             <Input
-              placeholder="Event Organizer Name"
+              placeholder="name of the user creating the event"
               onChange={(event) => {
                 setWritter_name(event.target.value);
               }}
@@ -167,9 +167,9 @@ export default function CreatePost() {
             />
           </Form.Item>
 
-          <Form.Item label="nic">
+          <Form.Item label="NIC">
             <Input
-              placeholder="Enter Your Nic Number"
+              placeholder="Enter your NIC Number"
               onChange={(event) => {
                 setNic(event.target.value);
               }}
@@ -250,8 +250,8 @@ export default function CreatePost() {
               },
 
               {
-                title: "Nic number & Type",
-                description: "Tell us more which type of event you have!",
+                title: "NIC number",
+                description: "Enter a valid user NIC",
               },
             ]}
           />
@@ -262,8 +262,8 @@ export default function CreatePost() {
           showAlert &&
           (
           <Alert
-            message="Success Create Your Event"
-            description="To view your event go to the Explore event section.Leatest event will be shown first."
+            message="Successfuly Created Your Event"
+            description="To view your event go to the Explore event section."
             type="success"
             showIcon
           />
