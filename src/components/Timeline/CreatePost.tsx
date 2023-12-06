@@ -20,7 +20,12 @@ export default function CreatePost() {
   const [title, setTitle] = useState("");
   const [writter_name, setWritter_name] = useState("");
   const [discription, setDiscription] = useState("");
+<<<<<<< Updated upstream
   const [reacts, setReacts] = useState(0);
+=======
+  const [nic, setNic] = useState("");
+  const [contact, setContact] = useState("");
+>>>>>>> Stashed changes
   const [createDate, setCreateDate] = useState("");
   const [type, setType] = useState("");
   const [location, setLocation] = useState("");
@@ -40,7 +45,12 @@ export default function CreatePost() {
         title,
         writter_name,
         discription,
+<<<<<<< Updated upstream
         reacts,
+=======
+        nic,
+        contact,
+>>>>>>> Stashed changes
         createDate,
         type,
         location,
@@ -52,7 +62,11 @@ export default function CreatePost() {
   useEffect(() => {
     processSteps();
     console.log(stepsValue);
+<<<<<<< Updated upstream
   }, [title, location, discription, reacts]);
+=======
+  }, [title, location, discription, nic,contact]);
+>>>>>>> Stashed changes
 
   function processSteps() {
     if (title.length > 1) {
@@ -70,7 +84,8 @@ export default function CreatePost() {
       reacts >= 1 &&
       discription.length > 1 &&
       location.length > 1 &&
-      title.length > 1
+      title.length > 1 &&
+      contact.length > 1
     ) {
       setStepsValue(5);
     }
@@ -154,11 +169,23 @@ export default function CreatePost() {
             />
           </Form.Item>
 
+<<<<<<< Updated upstream
           <Form.Item label="Reacts">
+=======
+          <Form.Item label="Organizer's NIC">
+>>>>>>> Stashed changes
             <Input
               placeholder="Reacts"
               onChange={(event) => {
                 setReacts(parseInt(event.target.value));
+              }}
+            />
+          </Form.Item>
+          <Form.Item label="Organizer's Contact number">
+            <Input
+              placeholder="Enter Your Contact Number"
+              onChange={(event) => {
+                setContact(event.target.value);
               }}
             />
           </Form.Item>
@@ -237,9 +264,18 @@ export default function CreatePost() {
               },
 
               {
+<<<<<<< Updated upstream
                 title: "Reacts & Type",
                 description: "Tell us more which type of event you have!",
+=======
+                title: "Nic number & Type",
+                description: "This is for verfication process",
+>>>>>>> Stashed changes
               },
+              {
+                title: "Contact Number",
+                description: "If we need to contact you",
+              }
             ]}
           />
         </div>
