@@ -1,0 +1,29 @@
+import React, { useState } from 'react';
+import SearchButton from './SearchButton';
+
+const App = () => {
+  const [searchResults, setSearchResults] = useState([]);
+
+  const handleSearch = (searchTerm) => {
+    // Perform your search logic here using the searchTerm
+    // For example, fetching data from an API
+
+    // For demonstration purposes, just updating the searchResults state
+    setSearchResults([/* Search results data */]);
+  };
+
+  return (
+    <div>
+      <h1>Search Example</h1>
+      <SearchButton onSearch={handleSearch} />
+      {/* Display search results */}
+      <ul>
+        {searchResults.map((result) => (
+          <li key={result.id}>{/* Display each search result */}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default App;
